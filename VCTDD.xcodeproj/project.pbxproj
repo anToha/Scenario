@@ -13,6 +13,9 @@
 		458987551FAFAA450013D8F2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 458987541FAFAA450013D8F2 /* Assets.xcassets */; };
 		458987581FAFAA450013D8F2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 458987561FAFAA450013D8F2 /* LaunchScreen.storyboard */; };
 		458987631FAFAA450013D8F2 /* VCTDDUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458987621FAFAA450013D8F2 /* VCTDDUITests.swift */; };
+		4589876E1FAFAA680013D8F2 /* TestPropsBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4589876D1FAFAA680013D8F2 /* TestPropsBuilder.swift */; };
+		4589876F1FAFAA680013D8F2 /* TestPropsBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4589876D1FAFAA680013D8F2 /* TestPropsBuilder.swift */; };
+		458987701FAFAC0F0013D8F2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4589874F1FAFAA450013D8F2 /* ViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -26,16 +29,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		4589874A1FAFAA450013D8F2 /* VCTDD.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VCTDD.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4589874A1FAFAA450013D8F2 /* UITestingApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UITestingApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4589874D1FAFAA450013D8F2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4589874F1FAFAA450013D8F2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		458987521FAFAA450013D8F2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		458987541FAFAA450013D8F2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		458987571FAFAA450013D8F2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		458987591FAFAA450013D8F2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4589875E1FAFAA450013D8F2 /* VCTDDUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VCTDDUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4589875E1FAFAA450013D8F2 /* UITestingAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UITestingAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		458987621FAFAA450013D8F2 /* VCTDDUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCTDDUITests.swift; sourceTree = "<group>"; };
 		458987641FAFAA450013D8F2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4589876D1FAFAA680013D8F2 /* TestPropsBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestPropsBuilder.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,8 +72,8 @@
 		4589874B1FAFAA450013D8F2 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				4589874A1FAFAA450013D8F2 /* VCTDD.app */,
-				4589875E1FAFAA450013D8F2 /* VCTDDUITests.xctest */,
+				4589874A1FAFAA450013D8F2 /* UITestingApp.app */,
+				4589875E1FAFAA450013D8F2 /* UITestingAppTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -79,6 +83,7 @@
 			children = (
 				4589874D1FAFAA450013D8F2 /* AppDelegate.swift */,
 				4589874F1FAFAA450013D8F2 /* ViewController.swift */,
+				4589876D1FAFAA680013D8F2 /* TestPropsBuilder.swift */,
 				458987511FAFAA450013D8F2 /* Main.storyboard */,
 				458987541FAFAA450013D8F2 /* Assets.xcassets */,
 				458987561FAFAA450013D8F2 /* LaunchScreen.storyboard */,
@@ -99,9 +104,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		458987491FAFAA450013D8F2 /* VCTDD */ = {
+		458987491FAFAA450013D8F2 /* UITestingApp */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 458987671FAFAA450013D8F2 /* Build configuration list for PBXNativeTarget "VCTDD" */;
+			buildConfigurationList = 458987671FAFAA450013D8F2 /* Build configuration list for PBXNativeTarget "UITestingApp" */;
 			buildPhases = (
 				458987461FAFAA450013D8F2 /* Sources */,
 				458987471FAFAA450013D8F2 /* Frameworks */,
@@ -111,14 +116,14 @@
 			);
 			dependencies = (
 			);
-			name = VCTDD;
+			name = UITestingApp;
 			productName = VCTDD;
-			productReference = 4589874A1FAFAA450013D8F2 /* VCTDD.app */;
+			productReference = 4589874A1FAFAA450013D8F2 /* UITestingApp.app */;
 			productType = "com.apple.product-type.application";
 		};
-		4589875D1FAFAA450013D8F2 /* VCTDDUITests */ = {
+		4589875D1FAFAA450013D8F2 /* UITestingAppTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 4589876A1FAFAA450013D8F2 /* Build configuration list for PBXNativeTarget "VCTDDUITests" */;
+			buildConfigurationList = 4589876A1FAFAA450013D8F2 /* Build configuration list for PBXNativeTarget "UITestingAppTests" */;
 			buildPhases = (
 				4589875A1FAFAA450013D8F2 /* Sources */,
 				4589875B1FAFAA450013D8F2 /* Frameworks */,
@@ -129,9 +134,9 @@
 			dependencies = (
 				458987601FAFAA450013D8F2 /* PBXTargetDependency */,
 			);
-			name = VCTDDUITests;
+			name = UITestingAppTests;
 			productName = VCTDDUITests;
-			productReference = 4589875E1FAFAA450013D8F2 /* VCTDDUITests.xctest */;
+			productReference = 4589875E1FAFAA450013D8F2 /* UITestingAppTests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -168,8 +173,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				458987491FAFAA450013D8F2 /* VCTDD */,
-				4589875D1FAFAA450013D8F2 /* VCTDDUITests */,
+				458987491FAFAA450013D8F2 /* UITestingApp */,
+				4589875D1FAFAA450013D8F2 /* UITestingAppTests */,
 			);
 		};
 /* End PBXProject section */
@@ -199,6 +204,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4589876E1FAFAA680013D8F2 /* TestPropsBuilder.swift in Sources */,
 				458987501FAFAA450013D8F2 /* ViewController.swift in Sources */,
 				4589874E1FAFAA450013D8F2 /* AppDelegate.swift in Sources */,
 			);
@@ -208,6 +214,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				458987701FAFAC0F0013D8F2 /* ViewController.swift in Sources */,
+				4589876F1FAFAA680013D8F2 /* TestPropsBuilder.swift in Sources */,
 				458987631FAFAA450013D8F2 /* VCTDDUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -217,7 +225,7 @@
 /* Begin PBXTargetDependency section */
 		458987601FAFAA450013D8F2 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 458987491FAFAA450013D8F2 /* VCTDD */;
+			target = 458987491FAFAA450013D8F2 /* UITestingApp */;
 			targetProxy = 4589875F1FAFAA450013D8F2 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -423,7 +431,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		458987671FAFAA450013D8F2 /* Build configuration list for PBXNativeTarget "VCTDD" */ = {
+		458987671FAFAA450013D8F2 /* Build configuration list for PBXNativeTarget "UITestingApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				458987681FAFAA450013D8F2 /* Debug */,
@@ -432,7 +440,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		4589876A1FAFAA450013D8F2 /* Build configuration list for PBXNativeTarget "VCTDDUITests" */ = {
+		4589876A1FAFAA450013D8F2 /* Build configuration list for PBXNativeTarget "UITestingAppTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				4589876B1FAFAA450013D8F2 /* Debug */,

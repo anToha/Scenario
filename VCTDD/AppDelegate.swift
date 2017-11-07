@@ -12,10 +12,32 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
-
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        let mainWindow = UIWindow(frame: UIScreen.main.bounds)
+        self.window = mainWindow
+        
+        let storyboard = UIStoryboard.init(name: "Main", bundle: nil)
+        let mainViewController = storyboard.instantiateInitialViewController() as! ViewController
+        
+        mainWindow.rootViewController = mainViewController
+        
+        mainWindow.makeKeyAndVisible()
+        
+
+        
+        let eventsReportingLabel = UILabel(frame: CGRect(x: 0, y: 0, width: 100, height: 100))
+        eventsReportingLabel.accessibilityIdentifier = "eventsReportingLabel"
+        mainWindow.addSubview(eventsReportingLabel)
+        mainWindow.sendSubview(toBack: eventsReportingLabel)
+        
+        let propsBuilder = TestPropsBuilder(eventReporter: { eventDescription in
+            eventsReportingLabel.text = eventDescription
+        })
+        
+        mainViewController.props = propsBuilder.buildProps_ViewController_01()
+
         return true
     }
 
