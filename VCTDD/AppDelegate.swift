@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import UI
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -18,7 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let mainWindow = UIWindow(frame: UIScreen.main.bounds)
         self.window = mainWindow
         
-        let storyboard = UIStoryboard.init(name: "Main", bundle: nil)
+        let storyboard = UIStoryboard.init(name: "Main", bundle: Bundle(identifier: "private.UI"))
         let mainViewController = storyboard.instantiateInitialViewController() as! ViewController
         
         mainWindow.rootViewController = mainViewController

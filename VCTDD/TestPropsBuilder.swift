@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import UI
 
 class TestPropsBuilder {
     typealias EventReportedClosure = (_ eventUniqueDescription: String) -> ()

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+public class ViewController: UIViewController {
     public typealias Props = (
         title: String,
         buttonPressed: () -> ()
