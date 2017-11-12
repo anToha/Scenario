@@ -11,14 +11,16 @@
 		458987551FAFAA450013D8F2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 458987541FAFAA450013D8F2 /* Assets.xcassets */; };
 		458987581FAFAA450013D8F2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 458987561FAFAA450013D8F2 /* LaunchScreen.storyboard */; };
 		458987631FAFAA450013D8F2 /* VCTDDUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458987621FAFAA450013D8F2 /* VCTDDUITests.swift */; };
-		4589876E1FAFAA680013D8F2 /* TestPropsBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4589876D1FAFAA680013D8F2 /* TestPropsBuilder.swift */; };
-		4589876F1FAFAA680013D8F2 /* TestPropsBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4589876D1FAFAA680013D8F2 /* TestPropsBuilder.swift */; };
+		458EE3601FB8B32D007E8472 /* TestApplicationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458EE35F1FB8B32D007E8472 /* TestApplicationManager.swift */; };
+		458EE3621FB8B514007E8472 /* ValidationTestScenariosManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458EE3611FB8B514007E8472 /* ValidationTestScenariosManager.swift */; };
+		458EE3641FB8B61B007E8472 /* TestApplicationRootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458EE3631FB8B61B007E8472 /* TestApplicationRootViewController.swift */; };
+		458EE3661FB8BD71007E8472 /* ScenariosListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458EE3651FB8BD71007E8472 /* ScenariosListTableViewController.swift */; };
 		45DC882F1FB25EA200022582 /* UI.h in Headers */ = {isa = PBXBuildFile; fileRef = 45DC882D1FB25EA200022582 /* UI.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		45DC88321FB25EA200022582 /* UI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45DC882B1FB25EA200022582 /* UI.framework */; };
 		45DC88331FB25EA200022582 /* UI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 45DC882B1FB25EA200022582 /* UI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		45DC88381FB25EB600022582 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4589874F1FAFAA450013D8F2 /* ViewController.swift */; };
 		45DC88391FB25EBD00022582 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 458987511FAFAA450013D8F2 /* Main.storyboard */; };
-		45DC883B1FB2659000022582 /* UITestScenario.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45DC883A1FB2659000022582 /* UITestScenario.swift */; };
+		45DC883B1FB2659000022582 /* ViewControllerTestScenario.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45DC883A1FB2659000022582 /* ViewControllerTestScenario.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,11 +65,14 @@
 		4589875E1FAFAA450013D8F2 /* UITestingAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UITestingAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		458987621FAFAA450013D8F2 /* VCTDDUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCTDDUITests.swift; sourceTree = "<group>"; };
 		458987641FAFAA450013D8F2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4589876D1FAFAA680013D8F2 /* TestPropsBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestPropsBuilder.swift; sourceTree = "<group>"; };
+		458EE35F1FB8B32D007E8472 /* TestApplicationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestApplicationManager.swift; sourceTree = "<group>"; };
+		458EE3611FB8B514007E8472 /* ValidationTestScenariosManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationTestScenariosManager.swift; sourceTree = "<group>"; };
+		458EE3631FB8B61B007E8472 /* TestApplicationRootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestApplicationRootViewController.swift; sourceTree = "<group>"; };
+		458EE3651FB8BD71007E8472 /* ScenariosListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScenariosListTableViewController.swift; sourceTree = "<group>"; };
 		45DC882B1FB25EA200022582 /* UI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = UI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		45DC882D1FB25EA200022582 /* UI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UI.h; sourceTree = "<group>"; };
 		45DC882E1FB25EA200022582 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		45DC883A1FB2659000022582 /* UITestScenario.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITestScenario.swift; sourceTree = "<group>"; };
+		45DC883A1FB2659000022582 /* ViewControllerTestScenario.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerTestScenario.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,11 +125,14 @@
 			isa = PBXGroup;
 			children = (
 				4589874D1FAFAA450013D8F2 /* AppDelegate.swift */,
-				4589876D1FAFAA680013D8F2 /* TestPropsBuilder.swift */,
 				458987541FAFAA450013D8F2 /* Assets.xcassets */,
 				458987561FAFAA450013D8F2 /* LaunchScreen.storyboard */,
 				458987591FAFAA450013D8F2 /* Info.plist */,
-				45DC883A1FB2659000022582 /* UITestScenario.swift */,
+				45DC883A1FB2659000022582 /* ViewControllerTestScenario.swift */,
+				458EE35F1FB8B32D007E8472 /* TestApplicationManager.swift */,
+				458EE3631FB8B61B007E8472 /* TestApplicationRootViewController.swift */,
+				458EE3651FB8BD71007E8472 /* ScenariosListTableViewController.swift */,
+				458EE3611FB8B514007E8472 /* ValidationTestScenariosManager.swift */,
 			);
 			path = VCTDD;
 			sourceTree = "<group>";
@@ -295,9 +303,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				45DC883B1FB2659000022582 /* UITestScenario.swift in Sources */,
-				4589876E1FAFAA680013D8F2 /* TestPropsBuilder.swift in Sources */,
+				458EE3621FB8B514007E8472 /* ValidationTestScenariosManager.swift in Sources */,
+				45DC883B1FB2659000022582 /* ViewControllerTestScenario.swift in Sources */,
 				4589874E1FAFAA450013D8F2 /* AppDelegate.swift in Sources */,
+				458EE3661FB8BD71007E8472 /* ScenariosListTableViewController.swift in Sources */,
+				458EE3641FB8B61B007E8472 /* TestApplicationRootViewController.swift in Sources */,
+				458EE3601FB8B32D007E8472 /* TestApplicationManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -305,7 +316,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4589876F1FAFAA680013D8F2 /* TestPropsBuilder.swift in Sources */,
 				458987631FAFAA450013D8F2 /* VCTDDUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

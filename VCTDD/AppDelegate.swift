@@ -1,11 +1,3 @@
-//
-//  AppDelegate.swift
-//  VCTDD
-//
-//  Created by Anton Ogarkov on 11/5/17.
-//  Copyright © 2017 Anton Ogarkov. All rights reserved.
-//
-
 import UIKit
 import UI
 
@@ -19,25 +11,25 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let mainWindow = UIWindow(frame: UIScreen.main.bounds)
         self.window = mainWindow
         
-        let storyboard = UIStoryboard.init(name: "Main", bundle: Bundle(identifier: "private.UI"))
-        let mainViewController = storyboard.instantiateInitialViewController() as! ViewController
+//        let storyboard = UIStoryboard.init(name: "Main", bundle: Bundle(identifier: "private.UI"))
+//        let mainViewController = storyboard.instantiateInitialViewController() as! ViewController
         
-        mainWindow.rootViewController = mainViewController
+        mainWindow.rootViewController = TestApplicationManager.shared.testApplicationRootViewController
         
         mainWindow.makeKeyAndVisible()
         
 
         
-        let eventsReportingLabel = UILabel(frame: CGRect(x: 0, y: 0, width: 100, height: 100))
-        eventsReportingLabel.accessibilityIdentifier = "eventsReportingLabel"
-        mainWindow.addSubview(eventsReportingLabel)
-        mainWindow.sendSubview(toBack: eventsReportingLabel)
-        
-        let propsBuilder = TestPropsBuilder(eventReporter: { eventDescription in
-            eventsReportingLabel.text = eventDescription
-        })
-        
-        mainViewController.props = propsBuilder.buildProps_ViewController_01()
+//        let eventsReportingLabel = UILabel(frame: CGRect(x: 0, y: 0, width: 100, height: 100))
+//        eventsReportingLabel.accessibilityIdentifier = "eventsReportingLabel"
+//        mainWindow.addSubview(eventsReportingLabel)
+//        mainWindow.sendSubview(toBack: eventsReportingLabel)
+//
+//        let propsBuilder = TestPropsBuilder(eventReporter: { eventDescription in
+//            eventsReportingLabel.text = eventDescription
+//        })
+//
+//        mainViewController.props = propsBuilder.buildProps_ViewController_01()
 
         return true
     }

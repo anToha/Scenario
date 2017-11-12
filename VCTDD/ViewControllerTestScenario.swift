@@ -1,5 +1,5 @@
 import Foundation
-import UIKit
+import UIKit.UIViewController
 
 class ViewControllerTestScenario {
     let reportEventClosure: (_ uniqueEventDescription: String)->()
@@ -36,9 +36,9 @@ class TestScenariosRegistry {
     
     let testScenarios: [ViewControllerTestScenario]
     
-    init(reportEventClosure:@escaping (String) -> (), testScenariosClasses: [AnyClass]? = nil) {
-        if let testScenariosClasses = testScenariosClasses {
-            self.testScenariosClasses = testScenariosClasses
+    init(reportEventClosure:@escaping (String) -> (), testScenariosClassesToUse: [AnyClass]? = nil) {
+        if let testScenariosClassesToUse = testScenariosClassesToUse {
+            self.testScenariosClasses = testScenariosClassesToUse
         } else {
             self.testScenariosClasses = getSubclassesOfClass(queriedClass: ViewControllerTestScenario.self)
         }
