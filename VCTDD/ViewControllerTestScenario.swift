@@ -13,6 +13,14 @@ class ViewControllerTestScenario {
     }
 }
 
+func describeCalledFunction(inFile: String = #file,
+                            function: String = #function,
+                            line: Int = #line,
+                            column: Int = #column) -> String {
+    
+    return "File: \(inFile) Function: \(function) Line: \(line) Column: \(column)"
+}
+
 func getSubclassesOfClass(queriedClass: AnyClass) -> [AnyClass] {
     var count = UInt32(0)
     let classList = objc_copyClassList(&count)!
@@ -62,6 +70,18 @@ class TestScenariosRegistry {
 class ViewController1: UIViewController {
     typealias Props = (a: String, b: Int, buttonTouch: () -> ())
     var props: Props = ("", 0, {})
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        self.view.backgroundColor = UIColor.red
+        
+        let label = UILabel(frame: CGRect(x: 0, y: 0, width: 200, height: 100))
+        label.text = self.props.a + " \(self.props.b)"
+        self.view.addSubview(label)
+        
+        self.props.buttonTouch()
+    }
 }
 
 
@@ -74,9 +94,26 @@ class TestScenarioA: ViewControllerTestScenario {
     }
     
     func props() -> ViewController1.Props {
-        return ("", 0, {
-            self.reportEventClosure(#file + #function)
+        return ("Scenario A", 10, {
+            self.reportEventClosure(describeCalledFunction())
         })
     }
     
 }
+
+class TestScenarioB: ViewControllerTestScenario {
+    
+    override func buildViewController() -> UIViewController {
+        let vc = ViewController1()
+        vc.props = self.props()
+        return vc
+    }
+    
+    func props() -> ViewController1.Props {
+        return ("Scenario B", 100, {
+            self.reportEventClosure(describeCalledFunction())
+        })
+    }
+    
+}
+

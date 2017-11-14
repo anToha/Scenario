@@ -6,17 +6,26 @@ class TestApplicationManager {
     let testApplicationRootViewController: UIViewController
     
     private let internalTestApplicationRootViewController: TestApplicationRootViewController
-    private let scenariosListController: UIViewController
+    private let scenariosListController: ScenariosListTableViewController
     
     private var testScenariosRegistry: TestScenariosRegistry!
     
     init() {
-        self.internalTestApplicationRootViewController = TestApplicationRootViewController()
+        self.scenariosListController = ScenariosListTableViewController()
+
+        self.internalTestApplicationRootViewController = TestApplicationRootViewController(rootViewController: self.scenariosListController)
         self.testApplicationRootViewController = self.internalTestApplicationRootViewController
         
-        self.scenariosListController = UIViewController()
-        
         self.testScenariosRegistry = TestScenariosRegistry(reportEventClosure: self.eventFiredReporterFunction)
+        
+        var renderableScenarios = [ScenariosListTableViewController.Scenario]()
+        for (scenarioIndex, scenarioName) in self.testScenariosRegistry.testScenariosNames.enumerated() {
+            renderableScenarios.append((scenarioName, {
+                let selectedScenario = self.testScenariosRegistry.testScenarios[scenarioIndex]
+                self.internalTestApplicationRootViewController.present(selectedScenario.buildViewController(), animated: true, completion: nil)
+            }))
+        }
+        self.scenariosListController.scenariosList = renderableScenarios
     }
     
     func eventFiredReporterFunction(eventUniqueDescription: String) {
