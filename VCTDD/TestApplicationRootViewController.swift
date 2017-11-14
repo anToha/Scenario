@@ -1,11 +1,3 @@
-//
-//  TestApplicationRootViewController.swift
-//  UITestingApp
-//
-//  Created by Anton Ogarkov on 11/12/17.
-//  Copyright © 2017 Anton Ogarkov. All rights reserved.
-//
-
 import UIKit
 
 class TestApplicationRootViewController: UINavigationController {

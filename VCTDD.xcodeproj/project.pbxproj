@@ -11,7 +11,6 @@
 		458987551FAFAA450013D8F2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 458987541FAFAA450013D8F2 /* Assets.xcassets */; };
 		458987581FAFAA450013D8F2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 458987561FAFAA450013D8F2 /* LaunchScreen.storyboard */; };
 		458EE3601FB8B32D007E8472 /* TestApplicationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458EE35F1FB8B32D007E8472 /* TestApplicationManager.swift */; };
-		458EE3621FB8B514007E8472 /* ValidationTestScenariosManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458EE3611FB8B514007E8472 /* ValidationTestScenariosManager.swift */; };
 		458EE3641FB8B61B007E8472 /* TestApplicationRootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458EE3631FB8B61B007E8472 /* TestApplicationRootViewController.swift */; };
 		458EE3661FB8BD71007E8472 /* ScenariosListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458EE3651FB8BD71007E8472 /* ScenariosListTableViewController.swift */; };
 		458EE3A31FBB9761007E8472 /* ViewControllerTestScenario.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45DC883A1FB2659000022582 /* ViewControllerTestScenario.swift */; };
@@ -19,6 +18,7 @@
 		458EE3AA1FBB9A32007E8472 /* TestScenarios.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458EE3A91FBB9A32007E8472 /* TestScenarios.swift */; };
 		458EE3AB1FBB9A4D007E8472 /* TestScenarios.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458EE3A91FBB9A32007E8472 /* TestScenarios.swift */; };
 		458EE3AC1FBB9AA7007E8472 /* UI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45DC882B1FB25EA200022582 /* UI.framework */; };
+		458EE3AD1FBBA089007E8472 /* ValidationTestScenariosManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458EE3611FB8B514007E8472 /* ValidationTestScenariosManager.swift */; };
 		45DC882F1FB25EA200022582 /* UI.h in Headers */ = {isa = PBXBuildFile; fileRef = 45DC882D1FB25EA200022582 /* UI.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		45DC88321FB25EA200022582 /* UI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45DC882B1FB25EA200022582 /* UI.framework */; };
 		45DC88331FB25EA200022582 /* UI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 45DC882B1FB25EA200022582 /* UI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -320,7 +320,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				458EE3621FB8B514007E8472 /* ValidationTestScenariosManager.swift in Sources */,
 				45DC883B1FB2659000022582 /* ViewControllerTestScenario.swift in Sources */,
 				4589874E1FAFAA450013D8F2 /* AppDelegate.swift in Sources */,
 				458EE3AA1FBB9A32007E8472 /* TestScenarios.swift in Sources */,
@@ -334,6 +333,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				458EE3AD1FBBA089007E8472 /* ValidationTestScenariosManager.swift in Sources */,
 				458EE3AB1FBB9A4D007E8472 /* TestScenarios.swift in Sources */,
 				458EE3A31FBB9761007E8472 /* ViewControllerTestScenario.swift in Sources */,
 				458EE3A81FBB9A1C007E8472 /* VCTDDUITests.swift in Sources */,

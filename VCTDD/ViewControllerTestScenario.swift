@@ -23,7 +23,6 @@ func getSubclassesOfClass(queriedClass: AnyClass) -> [AnyClass] {
     return resultClasses
 }
 
-
 class ViewControllerTestScenario {
     let reportEventClosure: (_ uniqueEventDescription: String)->()
     
