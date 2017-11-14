@@ -22,7 +22,7 @@ class TestApplicationManager {
         for (scenarioIndex, scenarioName) in self.testScenariosRegistry.testScenariosNames.enumerated() {
             renderableScenarios.append((scenarioName, {
                 let selectedScenario = self.testScenariosRegistry.testScenarios[scenarioIndex]
-                self.internalTestApplicationRootViewController.present(selectedScenario.buildViewController(), animated: true, completion: nil)
+                self.internalTestApplicationRootViewController.pushViewController(selectedScenario.buildViewController(), animated: true)
             }))
         }
         self.scenariosListController.scenariosList = renderableScenarios

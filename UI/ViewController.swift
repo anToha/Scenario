@@ -16,8 +16,16 @@ public class ViewController: UIViewController {
     
     public var props: Props = ("", {}) {
         didSet {
-            self.titleLabel.text = props.title
+            if self.view != nil {
+                self.titleLabel.text = props.title
+            }
         }
+    }
+    
+    public override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        self.titleLabel.text = props.title
     }
     
     @IBOutlet weak var titleLabel: UILabel!

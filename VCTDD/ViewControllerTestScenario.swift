@@ -1,18 +1,6 @@
 import Foundation
 import UIKit.UIViewController
 
-class ViewControllerTestScenario {
-    let reportEventClosure: (_ uniqueEventDescription: String)->()
-    
-    required init(reportEventClosure: @escaping (_ uniqueEventDescription: String)->()) {
-        self.reportEventClosure = reportEventClosure
-    }
-    
-    func buildViewController() -> UIViewController {
-        preconditionFailure("Implement this method in subclass.")
-    }
-}
-
 func describeCalledFunction(inFile: String = #file,
                             function: String = #function,
                             line: Int = #line,
@@ -33,6 +21,19 @@ func getSubclassesOfClass(queriedClass: AnyClass) -> [AnyClass] {
         }
     }
     return resultClasses
+}
+
+
+class ViewControllerTestScenario {
+    let reportEventClosure: (_ uniqueEventDescription: String)->()
+    
+    required init(reportEventClosure: @escaping (_ uniqueEventDescription: String)->()) {
+        self.reportEventClosure = reportEventClosure
+    }
+    
+    func buildViewController() -> UIViewController {
+        preconditionFailure("Implement this method in subclass.")
+    }
 }
 
 class TestScenariosRegistry {
@@ -57,63 +58,3 @@ class TestScenariosRegistry {
         }
     }
 }
-
-
-
-
-
-
-
-
-
-
-class ViewController1: UIViewController {
-    typealias Props = (a: String, b: Int, buttonTouch: () -> ())
-    var props: Props = ("", 0, {})
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        self.view.backgroundColor = UIColor.red
-        
-        let label = UILabel(frame: CGRect(x: 0, y: 0, width: 200, height: 100))
-        label.text = self.props.a + " \(self.props.b)"
-        self.view.addSubview(label)
-        
-        self.props.buttonTouch()
-    }
-}
-
-
-class TestScenarioA: ViewControllerTestScenario {
-    
-    override func buildViewController() -> UIViewController {
-        let vc = ViewController1()
-        vc.props = self.props()
-        return vc
-    }
-    
-    func props() -> ViewController1.Props {
-        return ("Scenario A", 10, {
-            self.reportEventClosure(describeCalledFunction())
-        })
-    }
-    
-}
-
-class TestScenarioB: ViewControllerTestScenario {
-    
-    override func buildViewController() -> UIViewController {
-        let vc = ViewController1()
-        vc.props = self.props()
-        return vc
-    }
-    
-    func props() -> ViewController1.Props {
-        return ("Scenario B", 100, {
-            self.reportEventClosure(describeCalledFunction())
-        })
-    }
-    
-}
-
