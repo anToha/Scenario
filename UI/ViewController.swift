@@ -1,11 +1,3 @@
-//
-//  ViewController.swift
-//  View Controllers TDD test
-//
-//  Created by Anton Ogarkov on 11/5/17.
-//  Copyright © 2017 Anton Ogarkov. All rights reserved.
-//
-
 import UIKit
 
 public class ViewController: UIViewController {

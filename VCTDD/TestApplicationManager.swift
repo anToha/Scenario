@@ -15,6 +15,9 @@ class TestApplicationManager {
 
         self.internalTestApplicationRootViewController = TestApplicationRootViewController(rootViewController: self.scenariosListController)
         self.testApplicationRootViewController = self.internalTestApplicationRootViewController
+        self.internalTestApplicationRootViewController.closeScenarioButtonDidTouch = {
+            self.internalTestApplicationRootViewController.popViewController(animated: false)
+        }
         
         self.testScenariosRegistry = TestScenariosRegistry(reportEventClosure: self.eventFiredReporterFunction)
         
@@ -22,7 +25,7 @@ class TestApplicationManager {
         for (scenarioIndex, scenarioName) in self.testScenariosRegistry.testScenariosNames.enumerated() {
             renderableScenarios.append((scenarioName, {
                 let selectedScenario = self.testScenariosRegistry.testScenarios[scenarioIndex]
-                self.internalTestApplicationRootViewController.pushViewController(selectedScenario.buildViewController(), animated: true)
+                self.internalTestApplicationRootViewController.pushViewController(selectedScenario.buildViewController(), animated: false)
             }))
         }
         self.scenariosListController.scenariosList = renderableScenarios

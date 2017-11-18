@@ -23,18 +23,6 @@ func getSubclassesOfClass(queriedClass: AnyClass) -> [AnyClass] {
     return resultClasses
 }
 
-class ViewControllerTestScenario {
-    let reportEventClosure: (_ uniqueEventDescription: String)->()
-    
-    required init(reportEventClosure: @escaping (_ uniqueEventDescription: String)->()) {
-        self.reportEventClosure = reportEventClosure
-    }
-    
-    func buildViewController() -> UIViewController {
-        preconditionFailure("Implement this method in subclass.")
-    }
-}
-
 class TestScenariosRegistry {
     private let testScenariosClasses: [AnyClass]
     
@@ -55,5 +43,17 @@ class TestScenariosRegistry {
             let viewControllerTestScenarioClass = currentClass as! ViewControllerTestScenario.Type
             return viewControllerTestScenarioClass.init(reportEventClosure: reportEventClosure)
         }
+    }
+}
+
+class ViewControllerTestScenario {
+    let reportEventClosure: (_ uniqueEventDescription: String)->()
+    
+    required init(reportEventClosure: @escaping (_ uniqueEventDescription: String)->()) {
+        self.reportEventClosure = reportEventClosure
+    }
+    
+    func buildViewController() -> UIViewController {
+        preconditionFailure("Implement this method in subclass.")
     }
 }

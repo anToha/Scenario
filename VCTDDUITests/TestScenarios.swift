@@ -1,11 +1,3 @@
-//
-//  TestScenarios.swift
-//  UITestingApp
-//
-//  Created by Anton Ogarkov on 11/14/17.
-//  Copyright © 2017 Anton Ogarkov. All rights reserved.
-//
-
 import UIKit.UIViewController
 import UI
 

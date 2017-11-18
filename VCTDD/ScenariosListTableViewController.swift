@@ -1,11 +1,3 @@
-//
-//  ScenariosListTableViewController.swift
-//  UITestingApp
-//
-//  Created by Anton Ogarkov on 11/12/17.
-//  Copyright © 2017 Anton Ogarkov. All rights reserved.
-//
-
 import UIKit
 
 class ScenariosListTableViewController: UITableViewController {
@@ -34,7 +26,7 @@ class ScenariosListTableViewController: UITableViewController {
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: reuseID, for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: self.reuseID, for: indexPath)
         
         cell.textLabel?.text = scenariosList[indexPath.row].scenarioName
 
