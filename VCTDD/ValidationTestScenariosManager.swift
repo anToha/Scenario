@@ -13,15 +13,40 @@ class ValidationTestScenariosManager {
     func eventFiredReporterFunction(eventUniqueDescription: String) {
         self.reportedEventDescription = eventUniqueDescription
     }
+    
+    private func scenarioIndex(scenario: ViewControllerTestScenario.Type) -> Int? {
+        return testScenariosRegistry.testScenariosNames.index(of: String(describing: scenario))
+    }
+    
+    private func getValidationScenarioInstance(scenarioClass: ViewControllerTestScenario.Type) -> ViewControllerTestScenario? {
+        
+        // TODO: avoid using index
+        guard let scenarioIndex = self.scenarioIndex(scenario: scenarioClass) else {
+            return nil
+        }
+        return self.testScenariosRegistry.testScenarios[scenarioIndex]
+    }
+    
+    func validateEventIsFired(eventToValidate: () -> ()) {
+        eventToValidate()
+        XCTAssert(XCUIApplication().staticTexts["eventsReportingLabel"].label == self.reportedEventDescription)
+    }
+
+    func activateScenario(scenario: ViewControllerTestScenario.Type) -> ViewControllerTestScenario? {
+        guard let scenarioInstance = self.getValidationScenarioInstance(scenarioClass: scenario) else {
+            return nil
+        }
+        XCUIApplication().tables.staticTexts[String(describing: scenario)].tap()
+        return scenarioInstance
+    }
 }
 
-func validateEventIsFired(eventToValidate: @autoclosure () -> () -> ()) {
-    eventToValidate()()
-    XCTAssert(XCUIApplication().staticTexts["eventsReportingLabel"].label == ValidationTestScenariosManager.shared.reportedEventDescription)
+
+// helper functions
+func VCTDDValidateEventIsFired(eventToValidate: @autoclosure () -> () -> ()) {
+    ValidationTestScenariosManager.shared.validateEventIsFired(eventToValidate: eventToValidate())
 }
 
-func activateScenario(scenario: ViewControllerTestScenario.Type) -> ViewControllerTestScenario? {
-    CHECK THAT SCENARIO IS PRESENT
-    XCUIApplication().tables.staticTexts[String(describing: scenario)].tap()
-    RETURN SCENARIO
+func VCTDDActivateScenario(scenario: ViewControllerTestScenario.Type) -> ViewControllerTestScenario? {
+    return ValidationTestScenariosManager.shared.activateScenario(scenario: scenario)
 }

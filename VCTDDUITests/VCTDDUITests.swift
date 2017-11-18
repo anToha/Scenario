@@ -24,23 +24,23 @@ class VCTDDUITests: XCTestCase {
         super.tearDown()
     }
     
-    func test02() {
-        XCUIApplication().tables/*@START_MENU_TOKEN@*/.staticTexts["TestScenarioB"]/*[[".cells.staticTexts[\"TestScenarioB\"]",".staticTexts[\"TestScenarioB\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
-
-    }
-    
-//    func test01() {
-//        let validationProps = self.propsBuilder.buildProps_ViewController_01()
-//        // Use recording to get started writing UI tests.
-//        // Use XCTAssert and related functions to verify your tests produce the correct results.
+//    func test02() {
 //
-//        let app = XCUIApplication()
-//        app/*@START_MENU_TOKEN@*/.buttons["testButton"]/*[[".buttons[\"Test Button\"]",".buttons[\"testButton\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
-//        validationProps.buttonPressed()
-//
-//        XCTAssert(app/*@START_MENU_TOKEN@*/.staticTexts["titleLabel"]/*[[".staticTexts[\"Hello\"]",".staticTexts[\"titleLabel\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.label == validationProps.title)
-//
+//        let tablesQuery = XCUIApplication().tables
+//        tablesQuery/*@START_MENU_TOKEN@*/.staticTexts["TestScenarioA"]/*[[".cells.staticTexts[\"TestScenarioA\"]",".staticTexts[\"TestScenarioA\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
 //
 //    }
+    
+    func test01() {
+        let validationScenario = VCTDDActivateScenario(scenario: TestScenarioA.self) as! TestScenarioA
+        // Use recording to get started writing UI tests.
+        // Use XCTAssert and related functions to verify your tests produce the correct results.
+
+        let app = XCUIApplication()
+        app/*@START_MENU_TOKEN@*/.buttons["testButton"]/*[[".buttons[\"Test Button\"]",".buttons[\"testButton\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
+        VCTDDValidateEventIsFired(eventToValidate: {validationScenario.props().buttonPressed()})
+
+        XCTAssert(app/*@START_MENU_TOKEN@*/.staticTexts["titleLabel"]/*[[".staticTexts[\"Hello\"]",".staticTexts[\"titleLabel\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.label == validationScenario.props().title)
+    }
     
 }
