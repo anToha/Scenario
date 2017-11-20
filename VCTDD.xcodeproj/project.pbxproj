@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		456099711FC33FB400C3E49F /* VCTDDFramework.h in Headers */ = {isa = PBXBuildFile; fileRef = 4560996F1FC33FB400C3E49F /* VCTDDFramework.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		456099741FC33FB400C3E49F /* VCTDDFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4560996D1FC33FB400C3E49F /* VCTDDFramework.framework */; };
+		456099751FC33FB400C3E49F /* VCTDDFramework.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4560996D1FC33FB400C3E49F /* VCTDDFramework.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		456099791FC3401900C3E49F /* VCTDDFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4560996D1FC33FB400C3E49F /* VCTDDFramework.framework */; };
 		4589874E1FAFAA450013D8F2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4589874D1FAFAA450013D8F2 /* AppDelegate.swift */; };
 		458987551FAFAA450013D8F2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 458987541FAFAA450013D8F2 /* Assets.xcassets */; };
 		458987581FAFAA450013D8F2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 458987561FAFAA450013D8F2 /* LaunchScreen.storyboard */; };
@@ -28,6 +32,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		456099721FC33FB400C3E49F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 458987421FAFAA450013D8F2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4560996C1FC33FB400C3E49F;
+			remoteInfo = VCTDDFramework;
+		};
 		4589875F1FAFAA450013D8F2 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 458987421FAFAA450013D8F2 /* Project object */;
@@ -52,6 +63,7 @@
 			dstSubfolderSpec = 10;
 			files = (
 				45DC88331FB25EA200022582 /* UI.framework in Embed Frameworks */,
+				456099751FC33FB400C3E49F /* VCTDDFramework.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -59,6 +71,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		4560996D1FC33FB400C3E49F /* VCTDDFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = VCTDDFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4560996F1FC33FB400C3E49F /* VCTDDFramework.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VCTDDFramework.h; sourceTree = "<group>"; };
+		456099701FC33FB400C3E49F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4589874A1FAFAA450013D8F2 /* UITestingApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UITestingApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4589874D1FAFAA450013D8F2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4589874F1FAFAA450013D8F2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -82,11 +97,19 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		456099691FC33FB400C3E49F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		458987471FAFAA450013D8F2 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				45DC88321FB25EA200022582 /* UI.framework in Frameworks */,
+				456099741FC33FB400C3E49F /* VCTDDFramework.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -94,6 +117,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				456099791FC3401900C3E49F /* VCTDDFramework.framework in Frameworks */,
 				458EE3AC1FBB9AA7007E8472 /* UI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -108,12 +132,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4560996E1FC33FB400C3E49F /* VCTDDFramework */ = {
+			isa = PBXGroup;
+			children = (
+				4560996F1FC33FB400C3E49F /* VCTDDFramework.h */,
+				456099701FC33FB400C3E49F /* Info.plist */,
+			);
+			path = VCTDDFramework;
+			sourceTree = "<group>";
+		};
 		458987411FAFAA450013D8F2 = {
 			isa = PBXGroup;
 			children = (
 				45DC882C1FB25EA200022582 /* UI */,
 				4589874C1FAFAA450013D8F2 /* VCTDD */,
 				458987611FAFAA450013D8F2 /* VCTDDUITests */,
+				4560996E1FC33FB400C3E49F /* VCTDDFramework */,
 				4589874B1FAFAA450013D8F2 /* Products */,
 				458EE3A51FBB97F5007E8472 /* Frameworks */,
 			);
@@ -125,6 +159,7 @@
 				4589874A1FAFAA450013D8F2 /* UITestingApp.app */,
 				4589875E1FAFAA450013D8F2 /* UITestingAppTests.xctest */,
 				45DC882B1FB25EA200022582 /* UI.framework */,
+				4560996D1FC33FB400C3E49F /* VCTDDFramework.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -177,6 +212,14 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
+		4560996A1FC33FB400C3E49F /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				456099711FC33FB400C3E49F /* VCTDDFramework.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		45DC88281FB25EA200022582 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -188,6 +231,24 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		4560996C1FC33FB400C3E49F /* VCTDDFramework */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 456099781FC33FB400C3E49F /* Build configuration list for PBXNativeTarget "VCTDDFramework" */;
+			buildPhases = (
+				456099681FC33FB400C3E49F /* Sources */,
+				456099691FC33FB400C3E49F /* Frameworks */,
+				4560996A1FC33FB400C3E49F /* Headers */,
+				4560996B1FC33FB400C3E49F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = VCTDDFramework;
+			productName = VCTDDFramework;
+			productReference = 4560996D1FC33FB400C3E49F /* VCTDDFramework.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 		458987491FAFAA450013D8F2 /* UITestingApp */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 458987671FAFAA450013D8F2 /* Build configuration list for PBXNativeTarget "UITestingApp" */;
@@ -201,6 +262,7 @@
 			);
 			dependencies = (
 				45DC88311FB25EA200022582 /* PBXTargetDependency */,
+				456099731FC33FB400C3E49F /* PBXTargetDependency */,
 			);
 			name = UITestingApp;
 			productName = VCTDD;
@@ -253,6 +315,10 @@
 				LastUpgradeCheck = 0900;
 				ORGANIZATIONNAME = "Anton Ogarkov";
 				TargetAttributes = {
+					4560996C1FC33FB400C3E49F = {
+						CreatedOnToolsVersion = 9.1;
+						ProvisioningStyle = Automatic;
+					};
 					458987491FAFAA450013D8F2 = {
 						CreatedOnToolsVersion = 9.0.1;
 						ProvisioningStyle = Automatic;
@@ -284,11 +350,19 @@
 				458987491FAFAA450013D8F2 /* UITestingApp */,
 				4589875D1FAFAA450013D8F2 /* UITestingAppTests */,
 				45DC882A1FB25EA200022582 /* UI */,
+				4560996C1FC33FB400C3E49F /* VCTDDFramework */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		4560996B1FC33FB400C3E49F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		458987481FAFAA450013D8F2 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -316,6 +390,13 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		456099681FC33FB400C3E49F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		458987461FAFAA450013D8F2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -351,6 +432,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		456099731FC33FB400C3E49F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4560996C1FC33FB400C3E49F /* VCTDDFramework */;
+			targetProxy = 456099721FC33FB400C3E49F /* PBXContainerItemProxy */;
+		};
 		458987601FAFAA450013D8F2 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 458987491FAFAA450013D8F2 /* UITestingApp */;
@@ -383,6 +469,56 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		456099761FC33FB400C3E49F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = T6FZ8UX634;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = VCTDDFramework/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = private.VCTDDFramework;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		456099771FC33FB400C3E49F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = T6FZ8UX634;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = VCTDDFramework/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = private.VCTDDFramework;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		458987651FAFAA450013D8F2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -611,6 +747,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		456099781FC33FB400C3E49F /* Build configuration list for PBXNativeTarget "VCTDDFramework" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				456099761FC33FB400C3E49F /* Debug */,
+				456099771FC33FB400C3E49F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		458987451FAFAA450013D8F2 /* Build configuration list for PBXProject "VCTDD" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
