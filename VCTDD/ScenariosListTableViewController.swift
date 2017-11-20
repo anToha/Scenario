@@ -2,38 +2,38 @@ import UIKit
 
 class ScenariosListTableViewController: UITableViewController {
 
-    typealias Scenario = (scenarioName: String, selectionAction:()->())
-    var scenariosList: [Scenario] = [] {
-        didSet {
-            self.tableView.reloadData()
-        }
+  typealias Scenario = (scenarioName: String, selectionAction:()->())
+  var scenariosList: [Scenario] = [] {
+    didSet {
+      self.tableView.reloadData()
     }
-    
-    let reuseID = "ScenarioCell"
+  }
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: self.reuseID)
-    }
-    
-    // MARK: - Table view data source
+  let reuseID = "ScenarioCell"
 
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return scenariosList.count
-    }
+  override func viewDidLoad() {
+    super.viewDidLoad()
 
-    
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: self.reuseID, for: indexPath)
-        
-        cell.textLabel?.text = scenariosList[indexPath.row].scenarioName
+    self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: self.reuseID)
+  }
 
-        return cell
-    }
-    
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        self.scenariosList[indexPath.row].selectionAction()
-    }
+  // MARK: - Table view data source
+
+  override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    // #warning Incomplete implementation, return the number of rows
+    return scenariosList.count
+  }
+
+
+  override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    let cell = tableView.dequeueReusableCell(withIdentifier: self.reuseID, for: indexPath)
+
+    cell.textLabel?.text = scenariosList[indexPath.row].scenarioName
+
+    return cell
+  }
+
+  override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    self.scenariosList[indexPath.row].selectionAction()
+  }
 }
