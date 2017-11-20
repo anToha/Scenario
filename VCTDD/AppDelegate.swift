@@ -1,5 +1,6 @@
 import UIKit
 import UI
+import VCTDDTestingUI
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -11,7 +12,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     let mainWindow = UIWindow(frame: UIScreen.main.bounds)
     self.window = mainWindow
 
-    mainWindow.rootViewController = TestApplicationManager.shared.testApplicationRootViewController
+    mainWindow.rootViewController = VCTDDTestingRootViewController()
 
     mainWindow.makeKeyAndVisible()
 

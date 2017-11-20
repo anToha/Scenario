@@ -1,4 +1,5 @@
 import XCTest
+import VCTDDTestScenario
 
 class ValidationTestScenariosManager {
   static let shared = ValidationTestScenariosManager()
@@ -41,20 +42,17 @@ class ValidationTestScenariosManager {
     XCUIApplication().tables.staticTexts[String(describing: scenario)].tap()
     return scenarioInstance
   }
-
-
 }
 
-
 // helper functions
-func VCTDDActivateScenario(scenario: ViewControllerTestScenario.Type) -> ViewControllerTestScenario? {
+public func VCTDDActivateScenario(scenario: ViewControllerTestScenario.Type) -> ViewControllerTestScenario? {
   return ValidationTestScenariosManager.shared.activateScenario(scenario: scenario)
 }
 
-func VCTDDDeactivateScenario() {
+public func VCTDDDeactivateScenario() {
   XCUIApplication().buttons["closeScenarioButton"].tap()
 }
 
-func VCTDDValidateEventIsFired(eventToValidate: @autoclosure () -> ()) {
+public func VCTDDValidateEventIsFired(eventToValidate: @autoclosure () -> ()) {
   ValidationTestScenariosManager.shared.validateEventIsFired(eventToValidate: eventToValidate)
 }

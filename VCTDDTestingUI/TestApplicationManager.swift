@@ -35,3 +35,7 @@ class TestApplicationManager {
     self.internalTestApplicationRootViewController.firedEventLabelText = eventUniqueDescription
   }
 }
+
+public func VCTDDTestingRootViewController() -> UIViewController {
+  return TestApplicationManager.shared.testApplicationRootViewController
+}

@@ -1,5 +1,6 @@
 import UIKit.UIViewController
 import UI
+import VCTDDTestScenario
 
 class TestScenarioA: ViewControllerTestScenario {
   
@@ -13,7 +14,7 @@ class TestScenarioA: ViewControllerTestScenario {
   
   func props() -> ViewController.Props {
     return ("Scenario A", {
-      self.reportEventClosure(describeCalledFunction())
+      self.reportEventClosure(VCTDDDescribeCalledFunction())
     })
   }
   
@@ -31,7 +32,7 @@ class TestScenarioB: ViewControllerTestScenario {
   
   func props() -> ViewController.Props {
     return ("Scenario B", {
-      self.reportEventClosure(describeCalledFunction())
+      self.reportEventClosure(VCTDDDescribeCalledFunction())
     })
   }
   

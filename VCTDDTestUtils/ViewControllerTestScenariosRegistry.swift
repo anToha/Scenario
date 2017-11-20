@@ -1,13 +1,5 @@
 import Foundation
-import UIKit.UIViewController
-
-func describeCalledFunction(inFile: String = #file,
-                            function: String = #function,
-                            line: Int = #line,
-                            column: Int = #column) -> String {
-
-  return "File: \(inFile) Function: \(function) Line: \(line) Column: \(column)"
-}
+import VCTDDTestScenario
 
 func getSubclassesOfClass(queriedClass: AnyClass) -> [AnyClass] {
   var count = UInt32(0)
@@ -43,17 +35,5 @@ class TestScenariosRegistry {
       let viewControllerTestScenarioClass = currentClass as! ViewControllerTestScenario.Type
       return viewControllerTestScenarioClass.init(reportEventClosure: reportEventClosure)
     }
-  }
-}
-
-class ViewControllerTestScenario {
-  let reportEventClosure: (_ uniqueEventDescription: String)->()
-
-  required init(reportEventClosure: @escaping (_ uniqueEventDescription: String)->()) {
-    self.reportEventClosure = reportEventClosure
-  }
-
-  func buildViewController() -> UIViewController {
-    preconditionFailure("Implement this method in subclass.")
   }
 }

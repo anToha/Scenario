@@ -7,37 +7,53 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		456099711FC33FB400C3E49F /* VCTDDFramework.h in Headers */ = {isa = PBXBuildFile; fileRef = 4560996F1FC33FB400C3E49F /* VCTDDFramework.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		456099741FC33FB400C3E49F /* VCTDDFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4560996D1FC33FB400C3E49F /* VCTDDFramework.framework */; };
-		456099751FC33FB400C3E49F /* VCTDDFramework.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4560996D1FC33FB400C3E49F /* VCTDDFramework.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		456099791FC3401900C3E49F /* VCTDDFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4560996D1FC33FB400C3E49F /* VCTDDFramework.framework */; };
+		4560998E1FC357AD00C3E49F /* VCTDDTestingUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 456099871FC357AD00C3E49F /* VCTDDTestingUI.framework */; };
+		4560998F1FC357AD00C3E49F /* VCTDDTestingUI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 456099871FC357AD00C3E49F /* VCTDDTestingUI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		4560999C1FC357CA00C3E49F /* VCTDDTestUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 4560999A1FC357CA00C3E49F /* VCTDDTestUtils.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		456099A71FC357ED00C3E49F /* VCTDDTestingUI.h in Headers */ = {isa = PBXBuildFile; fileRef = 456099A51FC357ED00C3E49F /* VCTDDTestingUI.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		456099A81FC357ED00C3E49F /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 456099A61FC357ED00C3E49F /* Info.plist */; };
+		456099A91FC357ED00C3E49F /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 456099A61FC357ED00C3E49F /* Info.plist */; };
+		456099AA1FC358CD00C3E49F /* ValidationTestScenariosManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458EE3611FB8B514007E8472 /* ValidationTestScenariosManager.swift */; };
+		456099AD1FC35A4700C3E49F /* VCTDDTestUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 456099981FC357CA00C3E49F /* VCTDDTestUtils.framework */; };
+		456099AE1FC35B0600C3E49F /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 458EE3A61FBB97F6007E8472 /* XCTest.framework */; };
+		456099AF1FC35DB700C3E49F /* TestApplicationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458EE35F1FB8B32D007E8472 /* TestApplicationManager.swift */; };
+		456099B01FC35DBC00C3E49F /* TestApplicationRootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458EE3631FB8B61B007E8472 /* TestApplicationRootViewController.swift */; };
+		456099B11FC35DC100C3E49F /* ScenariosListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458EE3651FB8BD71007E8472 /* ScenariosListTableViewController.swift */; };
+		456099BB1FC3667800C3E49F /* VCTDDTestScenario.h in Headers */ = {isa = PBXBuildFile; fileRef = 456099B91FC3667800C3E49F /* VCTDDTestScenario.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		456099BE1FC3667800C3E49F /* VCTDDTestScenario.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 456099B71FC3667800C3E49F /* VCTDDTestScenario.framework */; };
+		456099BF1FC3667800C3E49F /* VCTDDTestScenario.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 456099B71FC3667800C3E49F /* VCTDDTestScenario.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		456099C71FC3671600C3E49F /* ViewControllerTestScenario.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45DC883A1FB2659000022582 /* ViewControllerTestScenario.swift */; };
+		456099C91FC3675600C3E49F /* ViewControllerTestScenariosRegistry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 456099C31FC366E000C3E49F /* ViewControllerTestScenariosRegistry.swift */; };
+		456099CA1FC3676200C3E49F /* ViewControllerTestScenariosRegistry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 456099C31FC366E000C3E49F /* ViewControllerTestScenariosRegistry.swift */; };
+		456099CB1FC3677300C3E49F /* VCTDDTestScenario.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 456099B71FC3667800C3E49F /* VCTDDTestScenario.framework */; };
+		456099CC1FC3677D00C3E49F /* VCTDDTestScenario.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 456099B71FC3667800C3E49F /* VCTDDTestScenario.framework */; };
+		456099D01FC36AA100C3E49F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 456099CF1FC36AA100C3E49F /* LaunchScreen.storyboard */; };
 		4589874E1FAFAA450013D8F2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4589874D1FAFAA450013D8F2 /* AppDelegate.swift */; };
-		458987551FAFAA450013D8F2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 458987541FAFAA450013D8F2 /* Assets.xcassets */; };
-		458987581FAFAA450013D8F2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 458987561FAFAA450013D8F2 /* LaunchScreen.storyboard */; };
-		458EE3601FB8B32D007E8472 /* TestApplicationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458EE35F1FB8B32D007E8472 /* TestApplicationManager.swift */; };
-		458EE3641FB8B61B007E8472 /* TestApplicationRootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458EE3631FB8B61B007E8472 /* TestApplicationRootViewController.swift */; };
-		458EE3661FB8BD71007E8472 /* ScenariosListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458EE3651FB8BD71007E8472 /* ScenariosListTableViewController.swift */; };
-		458EE3A31FBB9761007E8472 /* ViewControllerTestScenario.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45DC883A1FB2659000022582 /* ViewControllerTestScenario.swift */; };
 		458EE3A81FBB9A1C007E8472 /* VCTDDUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458987621FAFAA450013D8F2 /* VCTDDUITests.swift */; };
 		458EE3AA1FBB9A32007E8472 /* TestScenarios.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458EE3A91FBB9A32007E8472 /* TestScenarios.swift */; };
 		458EE3AB1FBB9A4D007E8472 /* TestScenarios.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458EE3A91FBB9A32007E8472 /* TestScenarios.swift */; };
 		458EE3AC1FBB9AA7007E8472 /* UI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45DC882B1FB25EA200022582 /* UI.framework */; };
-		458EE3AD1FBBA089007E8472 /* ValidationTestScenariosManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458EE3611FB8B514007E8472 /* ValidationTestScenariosManager.swift */; };
 		45DC882F1FB25EA200022582 /* UI.h in Headers */ = {isa = PBXBuildFile; fileRef = 45DC882D1FB25EA200022582 /* UI.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		45DC88321FB25EA200022582 /* UI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45DC882B1FB25EA200022582 /* UI.framework */; };
 		45DC88331FB25EA200022582 /* UI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 45DC882B1FB25EA200022582 /* UI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		45DC88381FB25EB600022582 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4589874F1FAFAA450013D8F2 /* ViewController.swift */; };
 		45DC88391FB25EBD00022582 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 458987511FAFAA450013D8F2 /* Main.storyboard */; };
-		45DC883B1FB2659000022582 /* ViewControllerTestScenario.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45DC883A1FB2659000022582 /* ViewControllerTestScenario.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		456099721FC33FB400C3E49F /* PBXContainerItemProxy */ = {
+		4560998C1FC357AD00C3E49F /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 458987421FAFAA450013D8F2 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 4560996C1FC33FB400C3E49F;
-			remoteInfo = VCTDDFramework;
+			remoteGlobalIDString = 456099861FC357AD00C3E49F;
+			remoteInfo = VCTDDTestingUI;
+		};
+		456099BC1FC3667800C3E49F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 458987421FAFAA450013D8F2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 456099B61FC3667800C3E49F;
+			remoteInfo = VCTDDTestScenario;
 		};
 		4589875F1FAFAA450013D8F2 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -62,8 +78,9 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				456099BF1FC3667800C3E49F /* VCTDDTestScenario.framework in Embed Frameworks */,
 				45DC88331FB25EA200022582 /* UI.framework in Embed Frameworks */,
-				456099751FC33FB400C3E49F /* VCTDDFramework.framework in Embed Frameworks */,
+				4560998F1FC357AD00C3E49F /* VCTDDTestingUI.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -71,15 +88,21 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		4560996D1FC33FB400C3E49F /* VCTDDFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = VCTDDFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		4560996F1FC33FB400C3E49F /* VCTDDFramework.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VCTDDFramework.h; sourceTree = "<group>"; };
-		456099701FC33FB400C3E49F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		456099871FC357AD00C3E49F /* VCTDDTestingUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = VCTDDTestingUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		456099981FC357CA00C3E49F /* VCTDDTestUtils.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = VCTDDTestUtils.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4560999A1FC357CA00C3E49F /* VCTDDTestUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VCTDDTestUtils.h; sourceTree = "<group>"; };
+		4560999B1FC357CA00C3E49F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		456099A51FC357ED00C3E49F /* VCTDDTestingUI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VCTDDTestingUI.h; sourceTree = "<group>"; };
+		456099A61FC357ED00C3E49F /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		456099B71FC3667800C3E49F /* VCTDDTestScenario.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = VCTDDTestScenario.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		456099B91FC3667800C3E49F /* VCTDDTestScenario.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VCTDDTestScenario.h; sourceTree = "<group>"; };
+		456099BA1FC3667800C3E49F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		456099C31FC366E000C3E49F /* ViewControllerTestScenariosRegistry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerTestScenariosRegistry.swift; sourceTree = "<group>"; };
+		456099CF1FC36AA100C3E49F /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = ../../../.Trash/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4589874A1FAFAA450013D8F2 /* UITestingApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UITestingApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4589874D1FAFAA450013D8F2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4589874F1FAFAA450013D8F2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		458987521FAFAA450013D8F2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		458987541FAFAA450013D8F2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		458987571FAFAA450013D8F2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		458987591FAFAA450013D8F2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4589875E1FAFAA450013D8F2 /* UITestingAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UITestingAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		458987621FAFAA450013D8F2 /* VCTDDUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCTDDUITests.swift; sourceTree = "<group>"; };
@@ -97,7 +120,24 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		456099691FC33FB400C3E49F /* Frameworks */ = {
+		456099831FC357AD00C3E49F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				456099CC1FC3677D00C3E49F /* VCTDDTestScenario.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		456099941FC357CA00C3E49F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				456099CB1FC3677300C3E49F /* VCTDDTestScenario.framework in Frameworks */,
+				456099AE1FC35B0600C3E49F /* XCTest.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		456099B31FC3667800C3E49F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -108,8 +148,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				456099BE1FC3667800C3E49F /* VCTDDTestScenario.framework in Frameworks */,
 				45DC88321FB25EA200022582 /* UI.framework in Frameworks */,
-				456099741FC33FB400C3E49F /* VCTDDFramework.framework in Frameworks */,
+				4560998E1FC357AD00C3E49F /* VCTDDTestingUI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -117,7 +158,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				456099791FC3401900C3E49F /* VCTDDFramework.framework in Frameworks */,
+				456099AD1FC35A4700C3E49F /* VCTDDTestUtils.framework in Frameworks */,
 				458EE3AC1FBB9AA7007E8472 /* UI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -132,13 +173,37 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		4560996E1FC33FB400C3E49F /* VCTDDFramework */ = {
+		456099991FC357CA00C3E49F /* VCTDDTestUtils */ = {
 			isa = PBXGroup;
 			children = (
-				4560996F1FC33FB400C3E49F /* VCTDDFramework.h */,
-				456099701FC33FB400C3E49F /* Info.plist */,
+				456099C31FC366E000C3E49F /* ViewControllerTestScenariosRegistry.swift */,
+				458EE3611FB8B514007E8472 /* ValidationTestScenariosManager.swift */,
+				4560999A1FC357CA00C3E49F /* VCTDDTestUtils.h */,
+				4560999B1FC357CA00C3E49F /* Info.plist */,
 			);
-			path = VCTDDFramework;
+			path = VCTDDTestUtils;
+			sourceTree = "<group>";
+		};
+		456099A41FC357ED00C3E49F /* VCTDDTestingUI */ = {
+			isa = PBXGroup;
+			children = (
+				458EE3651FB8BD71007E8472 /* ScenariosListTableViewController.swift */,
+				458EE3631FB8B61B007E8472 /* TestApplicationRootViewController.swift */,
+				458EE35F1FB8B32D007E8472 /* TestApplicationManager.swift */,
+				456099A51FC357ED00C3E49F /* VCTDDTestingUI.h */,
+				456099A61FC357ED00C3E49F /* Info.plist */,
+			);
+			path = VCTDDTestingUI;
+			sourceTree = "<group>";
+		};
+		456099B81FC3667800C3E49F /* VCTDDTestScenario */ = {
+			isa = PBXGroup;
+			children = (
+				45DC883A1FB2659000022582 /* ViewControllerTestScenario.swift */,
+				456099B91FC3667800C3E49F /* VCTDDTestScenario.h */,
+				456099BA1FC3667800C3E49F /* Info.plist */,
+			);
+			path = VCTDDTestScenario;
 			sourceTree = "<group>";
 		};
 		458987411FAFAA450013D8F2 = {
@@ -147,7 +212,9 @@
 				45DC882C1FB25EA200022582 /* UI */,
 				4589874C1FAFAA450013D8F2 /* VCTDD */,
 				458987611FAFAA450013D8F2 /* VCTDDUITests */,
-				4560996E1FC33FB400C3E49F /* VCTDDFramework */,
+				456099A41FC357ED00C3E49F /* VCTDDTestingUI */,
+				456099991FC357CA00C3E49F /* VCTDDTestUtils */,
+				456099B81FC3667800C3E49F /* VCTDDTestScenario */,
 				4589874B1FAFAA450013D8F2 /* Products */,
 				458EE3A51FBB97F5007E8472 /* Frameworks */,
 			);
@@ -159,7 +226,9 @@
 				4589874A1FAFAA450013D8F2 /* UITestingApp.app */,
 				4589875E1FAFAA450013D8F2 /* UITestingAppTests.xctest */,
 				45DC882B1FB25EA200022582 /* UI.framework */,
-				4560996D1FC33FB400C3E49F /* VCTDDFramework.framework */,
+				456099871FC357AD00C3E49F /* VCTDDTestingUI.framework */,
+				456099981FC357CA00C3E49F /* VCTDDTestUtils.framework */,
+				456099B71FC3667800C3E49F /* VCTDDTestScenario.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -167,15 +236,9 @@
 		4589874C1FAFAA450013D8F2 /* VCTDD */ = {
 			isa = PBXGroup;
 			children = (
+				456099CF1FC36AA100C3E49F /* LaunchScreen.storyboard */,
 				4589874D1FAFAA450013D8F2 /* AppDelegate.swift */,
-				458987541FAFAA450013D8F2 /* Assets.xcassets */,
-				458987561FAFAA450013D8F2 /* LaunchScreen.storyboard */,
 				458987591FAFAA450013D8F2 /* Info.plist */,
-				45DC883A1FB2659000022582 /* ViewControllerTestScenario.swift */,
-				458EE35F1FB8B32D007E8472 /* TestApplicationManager.swift */,
-				458EE3631FB8B61B007E8472 /* TestApplicationRootViewController.swift */,
-				458EE3651FB8BD71007E8472 /* ScenariosListTableViewController.swift */,
-				458EE3611FB8B514007E8472 /* ValidationTestScenariosManager.swift */,
 			);
 			path = VCTDD;
 			sourceTree = "<group>";
@@ -212,11 +275,27 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		4560996A1FC33FB400C3E49F /* Headers */ = {
+		456099841FC357AD00C3E49F /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				456099711FC33FB400C3E49F /* VCTDDFramework.h in Headers */,
+				456099A71FC357ED00C3E49F /* VCTDDTestingUI.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		456099951FC357CA00C3E49F /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4560999C1FC357CA00C3E49F /* VCTDDTestUtils.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		456099B41FC3667800C3E49F /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				456099BB1FC3667800C3E49F /* VCTDDTestScenario.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -231,22 +310,58 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		4560996C1FC33FB400C3E49F /* VCTDDFramework */ = {
+		456099861FC357AD00C3E49F /* VCTDDTestingUI */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 456099781FC33FB400C3E49F /* Build configuration list for PBXNativeTarget "VCTDDFramework" */;
+			buildConfigurationList = 456099901FC357AD00C3E49F /* Build configuration list for PBXNativeTarget "VCTDDTestingUI" */;
 			buildPhases = (
-				456099681FC33FB400C3E49F /* Sources */,
-				456099691FC33FB400C3E49F /* Frameworks */,
-				4560996A1FC33FB400C3E49F /* Headers */,
-				4560996B1FC33FB400C3E49F /* Resources */,
+				456099821FC357AD00C3E49F /* Sources */,
+				456099831FC357AD00C3E49F /* Frameworks */,
+				456099841FC357AD00C3E49F /* Headers */,
+				456099851FC357AD00C3E49F /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = VCTDDFramework;
-			productName = VCTDDFramework;
-			productReference = 4560996D1FC33FB400C3E49F /* VCTDDFramework.framework */;
+			name = VCTDDTestingUI;
+			productName = VCTDDTestingUI;
+			productReference = 456099871FC357AD00C3E49F /* VCTDDTestingUI.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		456099971FC357CA00C3E49F /* VCTDDTestUtils */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 456099A11FC357CA00C3E49F /* Build configuration list for PBXNativeTarget "VCTDDTestUtils" */;
+			buildPhases = (
+				456099931FC357CA00C3E49F /* Sources */,
+				456099941FC357CA00C3E49F /* Frameworks */,
+				456099951FC357CA00C3E49F /* Headers */,
+				456099961FC357CA00C3E49F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = VCTDDTestUtils;
+			productName = VCTDDTestUtils;
+			productReference = 456099981FC357CA00C3E49F /* VCTDDTestUtils.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		456099B61FC3667800C3E49F /* VCTDDTestScenario */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 456099C01FC3667900C3E49F /* Build configuration list for PBXNativeTarget "VCTDDTestScenario" */;
+			buildPhases = (
+				456099B21FC3667800C3E49F /* Sources */,
+				456099B31FC3667800C3E49F /* Frameworks */,
+				456099B41FC3667800C3E49F /* Headers */,
+				456099B51FC3667800C3E49F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = VCTDDTestScenario;
+			productName = VCTDDTestScenario;
+			productReference = 456099B71FC3667800C3E49F /* VCTDDTestScenario.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		458987491FAFAA450013D8F2 /* UITestingApp */ = {
@@ -262,7 +377,8 @@
 			);
 			dependencies = (
 				45DC88311FB25EA200022582 /* PBXTargetDependency */,
-				456099731FC33FB400C3E49F /* PBXTargetDependency */,
+				4560998D1FC357AD00C3E49F /* PBXTargetDependency */,
+				456099BD1FC3667800C3E49F /* PBXTargetDependency */,
 			);
 			name = UITestingApp;
 			productName = VCTDD;
@@ -315,7 +431,15 @@
 				LastUpgradeCheck = 0900;
 				ORGANIZATIONNAME = "Anton Ogarkov";
 				TargetAttributes = {
-					4560996C1FC33FB400C3E49F = {
+					456099861FC357AD00C3E49F = {
+						CreatedOnToolsVersion = 9.1;
+						ProvisioningStyle = Automatic;
+					};
+					456099971FC357CA00C3E49F = {
+						CreatedOnToolsVersion = 9.1;
+						ProvisioningStyle = Automatic;
+					};
+					456099B61FC3667800C3E49F = {
 						CreatedOnToolsVersion = 9.1;
 						ProvisioningStyle = Automatic;
 					};
@@ -350,13 +474,30 @@
 				458987491FAFAA450013D8F2 /* UITestingApp */,
 				4589875D1FAFAA450013D8F2 /* UITestingAppTests */,
 				45DC882A1FB25EA200022582 /* UI */,
-				4560996C1FC33FB400C3E49F /* VCTDDFramework */,
+				456099861FC357AD00C3E49F /* VCTDDTestingUI */,
+				456099971FC357CA00C3E49F /* VCTDDTestUtils */,
+				456099B61FC3667800C3E49F /* VCTDDTestScenario */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		4560996B1FC33FB400C3E49F /* Resources */ = {
+		456099851FC357AD00C3E49F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				456099A91FC357ED00C3E49F /* Info.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		456099961FC357CA00C3E49F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		456099B51FC3667800C3E49F /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -367,8 +508,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				458987581FAFAA450013D8F2 /* LaunchScreen.storyboard in Resources */,
-				458987551FAFAA450013D8F2 /* Assets.xcassets in Resources */,
+				456099A81FC357ED00C3E49F /* Info.plist in Resources */,
+				456099D01FC36AA100C3E49F /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -390,10 +531,31 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		456099681FC33FB400C3E49F /* Sources */ = {
+		456099821FC357AD00C3E49F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				456099AF1FC35DB700C3E49F /* TestApplicationManager.swift in Sources */,
+				456099B01FC35DBC00C3E49F /* TestApplicationRootViewController.swift in Sources */,
+				456099B11FC35DC100C3E49F /* ScenariosListTableViewController.swift in Sources */,
+				456099CA1FC3676200C3E49F /* ViewControllerTestScenariosRegistry.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		456099931FC357CA00C3E49F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				456099AA1FC358CD00C3E49F /* ValidationTestScenariosManager.swift in Sources */,
+				456099C91FC3675600C3E49F /* ViewControllerTestScenariosRegistry.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		456099B21FC3667800C3E49F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				456099C71FC3671600C3E49F /* ViewControllerTestScenario.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -401,12 +563,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				45DC883B1FB2659000022582 /* ViewControllerTestScenario.swift in Sources */,
 				4589874E1FAFAA450013D8F2 /* AppDelegate.swift in Sources */,
 				458EE3AA1FBB9A32007E8472 /* TestScenarios.swift in Sources */,
-				458EE3661FB8BD71007E8472 /* ScenariosListTableViewController.swift in Sources */,
-				458EE3641FB8B61B007E8472 /* TestApplicationRootViewController.swift in Sources */,
-				458EE3601FB8B32D007E8472 /* TestApplicationManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -414,9 +572,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				458EE3AD1FBBA089007E8472 /* ValidationTestScenariosManager.swift in Sources */,
 				458EE3AB1FBB9A4D007E8472 /* TestScenarios.swift in Sources */,
-				458EE3A31FBB9761007E8472 /* ViewControllerTestScenario.swift in Sources */,
 				458EE3A81FBB9A1C007E8472 /* VCTDDUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -432,10 +588,15 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		456099731FC33FB400C3E49F /* PBXTargetDependency */ = {
+		4560998D1FC357AD00C3E49F /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 4560996C1FC33FB400C3E49F /* VCTDDFramework */;
-			targetProxy = 456099721FC33FB400C3E49F /* PBXContainerItemProxy */;
+			target = 456099861FC357AD00C3E49F /* VCTDDTestingUI */;
+			targetProxy = 4560998C1FC357AD00C3E49F /* PBXContainerItemProxy */;
+		};
+		456099BD1FC3667800C3E49F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 456099B61FC3667800C3E49F /* VCTDDTestScenario */;
+			targetProxy = 456099BC1FC3667800C3E49F /* PBXContainerItemProxy */;
 		};
 		458987601FAFAA450013D8F2 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -458,18 +619,10 @@
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		458987561FAFAA450013D8F2 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				458987571FAFAA450013D8F2 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		456099761FC33FB400C3E49F /* Debug */ = {
+		456099911FC357AD00C3E49F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
@@ -480,11 +633,11 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = VCTDDFramework/Info.plist;
+				INFOPLIST_FILE = VCTDDTestingUI/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = private.VCTDDFramework;
+				PRODUCT_BUNDLE_IDENTIFIER = private.VCTDDTestingUI;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.0;
@@ -494,7 +647,7 @@
 			};
 			name = Debug;
 		};
-		456099771FC33FB400C3E49F /* Release */ = {
+		456099921FC357AD00C3E49F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
@@ -505,11 +658,133 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = VCTDDFramework/Info.plist;
+				INFOPLIST_FILE = VCTDDTestingUI/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = private.VCTDDFramework;
+				PRODUCT_BUNDLE_IDENTIFIER = private.VCTDDTestingUI;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		456099A21FC357CA00C3E49F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = T6FZ8UX634;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				INFOPLIST_FILE = VCTDDTestUtils/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_LDFLAGS = (
+					"-weak_framework",
+					XCTest,
+					"-weak-lswiftXCTest",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = private.VCTDDTestUtils;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		456099A31FC357CA00C3E49F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = T6FZ8UX634;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				INFOPLIST_FILE = VCTDDTestUtils/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_LDFLAGS = (
+					"-weak_framework",
+					XCTest,
+					"-weak-lswiftXCTest",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = private.VCTDDTestUtils;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		456099C11FC3667900C3E49F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = T6FZ8UX634;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = VCTDDTestScenario/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = private.VCTDDTestScenario;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		456099C21FC3667900C3E49F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = T6FZ8UX634;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = VCTDDTestScenario/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = private.VCTDDTestScenario;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.0;
@@ -631,6 +906,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = T6FZ8UX634;
 				INFOPLIST_FILE = VCTDD/Info.plist;
@@ -648,6 +924,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = T6FZ8UX634;
 				INFOPLIST_FILE = VCTDD/Info.plist;
@@ -747,11 +1024,29 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		456099781FC33FB400C3E49F /* Build configuration list for PBXNativeTarget "VCTDDFramework" */ = {
+		456099901FC357AD00C3E49F /* Build configuration list for PBXNativeTarget "VCTDDTestingUI" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				456099761FC33FB400C3E49F /* Debug */,
-				456099771FC33FB400C3E49F /* Release */,
+				456099911FC357AD00C3E49F /* Debug */,
+				456099921FC357AD00C3E49F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		456099A11FC357CA00C3E49F /* Build configuration list for PBXNativeTarget "VCTDDTestUtils" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				456099A21FC357CA00C3E49F /* Debug */,
+				456099A31FC357CA00C3E49F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		456099C01FC3667900C3E49F /* Build configuration list for PBXNativeTarget "VCTDDTestScenario" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				456099C11FC3667900C3E49F /* Debug */,
+				456099C21FC3667900C3E49F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
