@@ -12,8 +12,6 @@
 		452686FC1FE8616D006C075E /* VCTDDTestingUI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 456099871FC357AD00C3E49F /* VCTDDTestingUI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		4560999C1FC357CA00C3E49F /* VCTDDTestUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 4560999A1FC357CA00C3E49F /* VCTDDTestUtils.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		456099A71FC357ED00C3E49F /* VCTDDTestingUI.h in Headers */ = {isa = PBXBuildFile; fileRef = 456099A51FC357ED00C3E49F /* VCTDDTestingUI.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		456099A81FC357ED00C3E49F /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 456099A61FC357ED00C3E49F /* Info.plist */; };
-		456099A91FC357ED00C3E49F /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 456099A61FC357ED00C3E49F /* Info.plist */; };
 		456099AA1FC358CD00C3E49F /* ValidationTestScenariosManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458EE3611FB8B514007E8472 /* ValidationTestScenariosManager.swift */; };
 		456099AD1FC35A4700C3E49F /* VCTDDTestUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 456099981FC357CA00C3E49F /* VCTDDTestUtils.framework */; };
 		456099AE1FC35B0600C3E49F /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 458EE3A61FBB97F6007E8472 /* XCTest.framework */; };
@@ -486,7 +484,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				456099A91FC357ED00C3E49F /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -509,7 +506,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				45000E5D20CD229D004EF982 /* Launch Screen.storyboard in Resources */,
-				456099A81FC357ED00C3E49F /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
