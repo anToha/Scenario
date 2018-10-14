@@ -12,7 +12,7 @@ class VCTDDUITests: XCTestCase {
   }
 
   func test01() {
-    let validationScenarioA = VCTDDActivateScenario(scenario: TestScenarioA.self) as! TestScenarioA
+    let validationScenarioA = VCTDDActivateScenario(scenario: TestScenarioA.self)
 
     let app = XCUIApplication()
     app/*@START_MENU_TOKEN@*/.buttons["testButton"]/*[[".buttons[\"Test Button\"]",".buttons[\"testButton\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
@@ -22,7 +22,7 @@ class VCTDDUITests: XCTestCase {
 
     VCTDDDeactivateScenario()
 
-    let validationScenarioB = VCTDDActivateScenario(scenario: TestScenarioB.self) as! TestScenarioB
+    let validationScenarioB = VCTDDActivateScenario(scenario: TestScenarioB.self)
 
     app/*@START_MENU_TOKEN@*/.buttons["testButton"]/*[[".buttons[\"Test Button\"]",".buttons[\"testButton\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
     VCTDDValidateEventIsFired(eventToValidate: validationScenarioB.props().buttonPressed())
