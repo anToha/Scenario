@@ -1,8 +1,8 @@
 import UIKit.UIViewController
-import UI
-import VCTDDTestScenario
+import SampleAppUI
+import Scenario
 
-class TestScenarioA: ViewControllerTestScenario {
+class TestScenarioA: TestScenario {
   
   override func buildViewController() -> UIViewController {
     let storyboard = UIStoryboard.init(name: "Main", bundle: Bundle(identifier: "private.UI"))
@@ -14,13 +14,13 @@ class TestScenarioA: ViewControllerTestScenario {
   
   func props() -> ViewController.Props {
     return ("Scenario A", {
-      self.reportEventClosure(VCTDDDescribeCalledFunction())
+      self.reportEventClosure(DescribeCalledFunction())
     })
   }
   
 }
 
-class TestScenarioB: ViewControllerTestScenario {
+class TestScenarioB: TestScenario {
   
   override func buildViewController() -> UIViewController {
     let storyboard = UIStoryboard.init(name: "Main", bundle: Bundle(identifier: "private.UI"))
@@ -32,7 +32,7 @@ class TestScenarioB: ViewControllerTestScenario {
   
   func props() -> ViewController.Props {
     return ("Scenario B", {
-      self.reportEventClosure(VCTDDDescribeCalledFunction())
+      self.reportEventClosure(DescribeCalledFunction())
     })
   }
   

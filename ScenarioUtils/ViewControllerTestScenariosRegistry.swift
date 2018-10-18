@@ -1,5 +1,5 @@
 import Foundation
-import VCTDDTestScenario
+import Scenario
 
 func getSubclassesOfClass(queriedClass: AnyClass) -> [AnyClass] {
   var count = UInt32(0)
@@ -22,17 +22,17 @@ class TestScenariosRegistry {
     testScenariosClasses.map({String(describing: $0)})
   }()
 
-  let testScenarios: [ViewControllerTestScenario]
+  let testScenarios: [TestScenario]
 
   init(reportEventClosure:@escaping (String) -> (), testScenariosClassesToUse: [AnyClass]? = nil) {
     if let testScenariosClassesToUse = testScenariosClassesToUse {
       self.testScenariosClasses = testScenariosClassesToUse
     } else {
-      self.testScenariosClasses = getSubclassesOfClass(queriedClass: ViewControllerTestScenario.self)
+      self.testScenariosClasses = getSubclassesOfClass(queriedClass: TestScenario.self)
     }
 
-    self.testScenarios = self.testScenariosClasses.lazy.map { (currentClass: AnyClass) -> ViewControllerTestScenario in
-      let viewControllerTestScenarioClass = currentClass as! ViewControllerTestScenario.Type
+    self.testScenarios = self.testScenariosClasses.lazy.map { (currentClass: AnyClass) -> TestScenario in
+      let viewControllerTestScenarioClass = currentClass as! TestScenario.Type
       return viewControllerTestScenarioClass.init(reportEventClosure: reportEventClosure)
     }
   }

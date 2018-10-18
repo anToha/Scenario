@@ -1,6 +1,6 @@
 import UIKit
-import UI
-import VCTDDTestingUI
+import SampleAppUI
+import ScenarioUI
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -12,7 +12,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     let mainWindow = UIWindow(frame: UIScreen.main.bounds)
     self.window = mainWindow
 
-    mainWindow.rootViewController = VCTDDTestingRootViewController()
+    mainWindow.rootViewController = ScenarioTestingRootViewController()
 
     mainWindow.makeKeyAndVisible()
 

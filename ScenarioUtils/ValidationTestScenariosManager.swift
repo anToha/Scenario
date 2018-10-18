@@ -1,5 +1,5 @@
 import XCTest
-import VCTDDTestScenario
+import Scenario
 
 class ValidationTestScenariosManager {
     static let shared = ValidationTestScenariosManager()
@@ -15,11 +15,11 @@ class ValidationTestScenariosManager {
         self.reportedEventDescription = eventUniqueDescription
     }
 
-    private func scenarioIndex(scenario: ViewControllerTestScenario.Type) -> Int? {
+    private func scenarioIndex(scenario: TestScenario.Type) -> Int? {
         return testScenariosRegistry.testScenariosNames.index(of: String(describing: scenario))
     }
 
-    private func getValidationScenarioInstance<Scenario>(scenarioClass: Scenario.Type) -> Scenario? where Scenario : ViewControllerTestScenario {
+    private func getValidationScenarioInstance<Scenario>(scenarioClass: Scenario.Type) -> Scenario? where Scenario : TestScenario {
 
         // TODO: avoid index usage.
         guard let scenarioIndex = self.scenarioIndex(scenario: scenarioClass) else {
@@ -35,7 +35,7 @@ class ValidationTestScenariosManager {
         XCTAssert(lastFiredEventDescription == eventToValidateDescription, "Last fired event mismatch with validated one. \n\n Last fired:\n\(lastFiredEventDescription) \n\n Validated event:\n\(eventToValidateDescription)")
     }
 
-    func activateScenario<Scenario>(scenario: Scenario.Type) -> Scenario where Scenario : ViewControllerTestScenario {
+    func activateScenario<Scenario>(scenario: Scenario.Type) -> Scenario where Scenario : TestScenario {
         guard let scenarioInstance = self.getValidationScenarioInstance(scenarioClass: scenario) else {
             fatalError("Could not find scenario of type: \(scenario)")
         }
@@ -45,14 +45,14 @@ class ValidationTestScenariosManager {
 }
 
 // helper functions
-public func VCTDDActivateScenario<Scenario>(scenario: Scenario.Type) -> Scenario where Scenario : ViewControllerTestScenario {
+public func ActivateScenario<Scenario>(scenario: Scenario.Type) -> Scenario where Scenario : TestScenario {
     return ValidationTestScenariosManager.shared.activateScenario(scenario: scenario)
 }
 
-public func VCTDDDeactivateScenario() {
+public func DeactivateScenario() {
     XCUIApplication().buttons["closeScenarioButton"].tap()
 }
 
-public func VCTDDValidateEventIsFired(eventToValidate: @autoclosure () -> ()) {
+public func ValidateScenarioEventIsFired(eventToValidate: @autoclosure () -> ()) {
     ValidationTestScenariosManager.shared.validateEventIsFired(eventToValidate: eventToValidate)
 }

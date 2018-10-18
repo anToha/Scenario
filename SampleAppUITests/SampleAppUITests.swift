@@ -1,7 +1,7 @@
 import XCTest
-import VCTDDTestUtils
+import ScenarioUtils
 
-class VCTDDUITests: XCTestCase {
+class SampleAppUITests: XCTestCase {
 
   override func setUp() {
     super.setUp()
@@ -12,23 +12,23 @@ class VCTDDUITests: XCTestCase {
   }
 
   func test01() {
-    let validationScenarioA = VCTDDActivateScenario(scenario: TestScenarioA.self)
+    let validationScenarioA = ActivateScenario(scenario: TestScenarioA.self)
 
     let app = XCUIApplication()
     app/*@START_MENU_TOKEN@*/.buttons["testButton"]/*[[".buttons[\"Test Button\"]",".buttons[\"testButton\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
-    VCTDDValidateEventIsFired(eventToValidate: validationScenarioA.props().buttonPressed())
+    ValidateScenarioEventIsFired(eventToValidate: validationScenarioA.props().buttonPressed())
 
     XCTAssert(app/*@START_MENU_TOKEN@*/.staticTexts["titleLabel"]/*[[".staticTexts[\"Hello\"]",".staticTexts[\"titleLabel\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.label == validationScenarioA.props().title)
 
-    VCTDDDeactivateScenario()
+    DeactivateScenario()
 
-    let validationScenarioB = VCTDDActivateScenario(scenario: TestScenarioB.self)
+    let validationScenarioB = ActivateScenario(scenario: TestScenarioB.self)
 
     app/*@START_MENU_TOKEN@*/.buttons["testButton"]/*[[".buttons[\"Test Button\"]",".buttons[\"testButton\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
-    VCTDDValidateEventIsFired(eventToValidate: validationScenarioB.props().buttonPressed())
+    ValidateScenarioEventIsFired(eventToValidate: validationScenarioB.props().buttonPressed())
 
     XCTAssert(app/*@START_MENU_TOKEN@*/.staticTexts["titleLabel"]/*[[".staticTexts[\"Hello\"]",".staticTexts[\"titleLabel\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.label == validationScenarioB.props().title)
 
-    VCTDDDeactivateScenario()
+    DeactivateScenario()
   }
 }

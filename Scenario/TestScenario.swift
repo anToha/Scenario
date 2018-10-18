@@ -1,15 +1,15 @@
 import Foundation
 import UIKit.UIViewController
 
-public func VCTDDDescribeCalledFunction(inFile: String = #file,
-                                        function: String = #function,
-                                        line: Int = #line,
-                                        column: Int = #column) -> String {
+public func DescribeCalledFunction(inFile: String = #file,
+                                   function: String = #function,
+                                   line: Int = #line,
+                                   column: Int = #column) -> String {
 
   return "File: \(inFile) Function: \(function) Line: \(line) Column: \(column)"
 }
 
-open class ViewControllerTestScenario {
+open class TestScenario {
   public let reportEventClosure: (_ uniqueEventDescription: String)->()
 
   public required init(reportEventClosure: @escaping (_ uniqueEventDescription: String)->()) {

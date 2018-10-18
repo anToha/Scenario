@@ -36,6 +36,6 @@ class TestApplicationManager {
   }
 }
 
-public func VCTDDTestingRootViewController() -> UIViewController {
+public func ScenarioTestingRootViewController() -> UIViewController {
   return TestApplicationManager.shared.testApplicationRootViewController
 }
