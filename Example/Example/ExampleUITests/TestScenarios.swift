@@ -1,12 +1,11 @@
 import UIKit.UIViewController
-import SampleAppUI
+import ExampleUI
 import Scenario
 
 class TestScenarioA: TestScenario {
   
   override func buildViewController() -> UIViewController {
-    let storyboard = UIStoryboard.init(name: "Main", bundle: Bundle(identifier: "private.UI"))
-    let vc = storyboard.instantiateInitialViewController() as! ViewController
+    let vc = ViewController.instantiate()
     
     vc.props = self.props()
     return vc
@@ -23,9 +22,8 @@ class TestScenarioA: TestScenario {
 class TestScenarioB: TestScenario {
   
   override func buildViewController() -> UIViewController {
-    let storyboard = UIStoryboard.init(name: "Main", bundle: Bundle(identifier: "private.UI"))
-    let vc = storyboard.instantiateInitialViewController() as! ViewController
-    
+    let vc = ViewController.instantiate()
+
     vc.props = self.props()
     return vc
   }

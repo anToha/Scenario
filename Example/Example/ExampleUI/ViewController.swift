@@ -1,6 +1,11 @@
 import UIKit
 
 public class ViewController: UIViewController {
+  public static func instantiate() -> ViewController {
+    let storyboard = UIStoryboard.init(name: "Main", bundle: Bundle(for: self))
+    return storyboard.instantiateInitialViewController() as! ViewController
+  }
+
   public typealias Props = (
     title: String,
     buttonPressed: () -> ()
