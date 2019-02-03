@@ -16,8 +16,8 @@
 		456099B11FC35DC100C3E49F /* ScenariosListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458EE3651FB8BD71007E8472 /* ScenariosListTableViewController.swift */; };
 		456099BB1FC3667800C3E49F /* Scenario.h in Headers */ = {isa = PBXBuildFile; fileRef = 456099B91FC3667800C3E49F /* Scenario.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		456099C71FC3671600C3E49F /* TestScenario.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45DC883A1FB2659000022582 /* TestScenario.swift */; };
-		456099C91FC3675600C3E49F /* ViewControllerTestScenariosRegistry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 456099C31FC366E000C3E49F /* ViewControllerTestScenariosRegistry.swift */; };
-		456099CA1FC3676200C3E49F /* ViewControllerTestScenariosRegistry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 456099C31FC366E000C3E49F /* ViewControllerTestScenariosRegistry.swift */; };
+		456099C91FC3675600C3E49F /* TestScenariosBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 456099C31FC366E000C3E49F /* TestScenariosBuilder.swift */; };
+		456099CA1FC3676200C3E49F /* TestScenariosBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 456099C31FC366E000C3E49F /* TestScenariosBuilder.swift */; };
 		456099CB1FC3677300C3E49F /* Scenario.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 456099B71FC3667800C3E49F /* Scenario.framework */; };
 		456099CC1FC3677D00C3E49F /* Scenario.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 456099B71FC3667800C3E49F /* Scenario.framework */; };
 /* End PBXBuildFile section */
@@ -32,7 +32,7 @@
 		456099B71FC3667800C3E49F /* Scenario.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Scenario.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		456099B91FC3667800C3E49F /* Scenario.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Scenario.h; sourceTree = "<group>"; };
 		456099BA1FC3667800C3E49F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		456099C31FC366E000C3E49F /* ViewControllerTestScenariosRegistry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerTestScenariosRegistry.swift; sourceTree = "<group>"; };
+		456099C31FC366E000C3E49F /* TestScenariosBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestScenariosBuilder.swift; sourceTree = "<group>"; };
 		458EE35F1FB8B32D007E8472 /* TestApplicationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestApplicationManager.swift; sourceTree = "<group>"; };
 		458EE3611FB8B514007E8472 /* ValidationTestScenariosManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationTestScenariosManager.swift; sourceTree = "<group>"; };
 		458EE3631FB8B61B007E8472 /* TestApplicationRootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestApplicationRootViewController.swift; sourceTree = "<group>"; };
@@ -72,7 +72,7 @@
 		456099991FC357CA00C3E49F /* ScenarioUtils */ = {
 			isa = PBXGroup;
 			children = (
-				456099C31FC366E000C3E49F /* ViewControllerTestScenariosRegistry.swift */,
+				456099C31FC366E000C3E49F /* TestScenariosBuilder.swift */,
 				458EE3611FB8B514007E8472 /* ValidationTestScenariosManager.swift */,
 				4560999A1FC357CA00C3E49F /* ScenarioUtils.h */,
 				4560999B1FC357CA00C3E49F /* Info.plist */,
@@ -291,7 +291,7 @@
 				456099AF1FC35DB700C3E49F /* TestApplicationManager.swift in Sources */,
 				456099B01FC35DBC00C3E49F /* TestApplicationRootViewController.swift in Sources */,
 				456099B11FC35DC100C3E49F /* ScenariosListTableViewController.swift in Sources */,
-				456099CA1FC3676200C3E49F /* ViewControllerTestScenariosRegistry.swift in Sources */,
+				456099CA1FC3676200C3E49F /* TestScenariosBuilder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -300,7 +300,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				456099AA1FC358CD00C3E49F /* ValidationTestScenariosManager.swift in Sources */,
-				456099C91FC3675600C3E49F /* ViewControllerTestScenariosRegistry.swift in Sources */,
+				456099C91FC3675600C3E49F /* TestScenariosBuilder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

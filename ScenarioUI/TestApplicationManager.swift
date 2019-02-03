@@ -8,8 +8,6 @@ class TestApplicationManager {
     private let internalTestApplicationRootViewController: TestApplicationRootViewController
     private let scenariosListController: ScenariosListTableViewController
 
-    private var testScenariosRegistry: TestScenariosRegistry!
-
     init() {
         self.scenariosListController = ScenariosListTableViewController()
 
@@ -19,13 +17,14 @@ class TestApplicationManager {
             self.internalTestApplicationRootViewController.popViewController(animated: false)
         }
 
-        self.testScenariosRegistry = TestScenariosRegistry(reportEventClosure: self.eventFiredReporterFunction)
+        let testScenarios = buildTestScenarios(withReportEventClosure: self.eventFiredReporterFunction)
 
         var renderableScenarios = [ScenariosListTableViewController.Scenario]()
-        for (scenarioIndex, scenarioName) in self.testScenariosRegistry.testScenariosNames.enumerated() {
+        for scenario in testScenarios {
+            let scenarioName = String(describing: type(of: scenario))
             renderableScenarios.append((scenarioName, {
-                let selectedScenario = self.testScenariosRegistry.testScenarios[scenarioIndex]
-                self.internalTestApplicationRootViewController.pushViewController(selectedScenario.buildViewController(), animated: false)
+                let viewController = scenario.buildViewController()
+                self.internalTestApplicationRootViewController.pushViewController(viewController, animated: false)
             }))
         }
         self.scenariosListController.scenariosList = renderableScenarios

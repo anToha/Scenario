@@ -5,10 +5,12 @@ class ValidationTestScenariosManager {
     static let shared = ValidationTestScenariosManager()
 
     private(set) var reportedEventDescription = ""
-    private var testScenariosRegistry: TestScenariosRegistry!
+    // TODO: remove force unwrapping
+    // implicit force unwrapping is here to allow passing eventFiredReporterFunction in init
+    private var testScenarios: [TestScenario]!
 
     init() {
-        self.testScenariosRegistry = TestScenariosRegistry(reportEventClosure: self.eventFiredReporterFunction)
+        self.testScenarios = buildTestScenarios(withReportEventClosure: self.eventFiredReporterFunction)
     }
 
     func eventFiredReporterFunction(eventUniqueDescription: String) {
@@ -16,9 +18,7 @@ class ValidationTestScenariosManager {
     }
 
     private func getValidationScenarioInstance<Scenario>(scenarioClass: Scenario.Type) -> Scenario? where Scenario : TestScenario {
-
-        let testScenarios = self.testScenariosRegistry.testScenarios
-        let foundScenario = testScenarios.first(where: {type(of: $0) == scenarioClass })
+        let foundScenario = self.testScenarios.first(where: {type(of: $0) == scenarioClass })
 
         return foundScenario as? Scenario
     }
