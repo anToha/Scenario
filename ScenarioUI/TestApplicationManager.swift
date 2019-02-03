@@ -1,41 +1,42 @@
 import UIKit
 
 class TestApplicationManager {
-  static let shared = TestApplicationManager()
+    static let shared = TestApplicationManager()
 
-  let testApplicationRootViewController: UIViewController
+    let testApplicationRootViewController: UIViewController
 
-  private let internalTestApplicationRootViewController: TestApplicationRootViewController
-  private let scenariosListController: ScenariosListTableViewController
+    private let internalTestApplicationRootViewController: TestApplicationRootViewController
+    private let scenariosListController: ScenariosListTableViewController
 
-  private var testScenariosRegistry: TestScenariosRegistry!
+    private var testScenariosRegistry: TestScenariosRegistry!
 
-  init() {
-    self.scenariosListController = ScenariosListTableViewController()
+    init() {
+        self.scenariosListController = ScenariosListTableViewController()
 
-    self.internalTestApplicationRootViewController = TestApplicationRootViewController(rootViewController: self.scenariosListController)
-    self.testApplicationRootViewController = self.internalTestApplicationRootViewController
-    self.internalTestApplicationRootViewController.closeScenarioButtonDidTouch = {
-      self.internalTestApplicationRootViewController.popViewController(animated: false)
+        self.internalTestApplicationRootViewController = TestApplicationRootViewController(rootViewController: self.scenariosListController)
+        self.testApplicationRootViewController = self.internalTestApplicationRootViewController
+        self.internalTestApplicationRootViewController.closeScenarioButtonDidTouch = {
+            self.internalTestApplicationRootViewController.popViewController(animated: false)
+        }
+
+        self.testScenariosRegistry = TestScenariosRegistry(reportEventClosure: self.eventFiredReporterFunction)
+
+        var renderableScenarios = [ScenariosListTableViewController.Scenario]()
+        for (scenarioIndex, scenarioName) in self.testScenariosRegistry.testScenariosNames.enumerated() {
+            renderableScenarios.append((scenarioName, {
+                let selectedScenario = self.testScenariosRegistry.testScenarios[scenarioIndex]
+                self.internalTestApplicationRootViewController.pushViewController(selectedScenario.buildViewController(), animated: false)
+            }))
+        }
+        self.scenariosListController.scenariosList = renderableScenarios
     }
 
-    self.testScenariosRegistry = TestScenariosRegistry(reportEventClosure: self.eventFiredReporterFunction)
-
-    var renderableScenarios = [ScenariosListTableViewController.Scenario]()
-    for (scenarioIndex, scenarioName) in self.testScenariosRegistry.testScenariosNames.enumerated() {
-      renderableScenarios.append((scenarioName, {
-        let selectedScenario = self.testScenariosRegistry.testScenarios[scenarioIndex]
-        self.internalTestApplicationRootViewController.pushViewController(selectedScenario.buildViewController(), animated: false)
-      }))
+    func eventFiredReporterFunction(eventUniqueDescription: String) {
+        self.internalTestApplicationRootViewController.firedEventLabelText = eventUniqueDescription
     }
-    self.scenariosListController.scenariosList = renderableScenarios
-  }
-
-  func eventFiredReporterFunction(eventUniqueDescription: String) {
-    self.internalTestApplicationRootViewController.firedEventLabelText = eventUniqueDescription
-  }
 }
 
 public func ScenarioTestingRootViewController() -> UIViewController {
-  return TestApplicationManager.shared.testApplicationRootViewController
+    return TestApplicationManager.shared.testApplicationRootViewController
 }
+

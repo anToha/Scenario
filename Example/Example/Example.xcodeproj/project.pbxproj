@@ -118,9 +118,9 @@
 				45D97B872206BF69004C1D39 /* Products */,
 				45D97BCB2206D39E004C1D39 /* Frameworks */,
 			);
-			indentWidth = 2;
+			indentWidth = 4;
 			sourceTree = "<group>";
-			tabWidth = 2;
+			tabWidth = 4;
 		};
 		45D97B872206BF69004C1D39 /* Products */ = {
 			isa = PBXGroup;

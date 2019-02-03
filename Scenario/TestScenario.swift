@@ -6,17 +6,18 @@ public func DescribeCalledFunction(inFile: String = #file,
                                    line: Int = #line,
                                    column: Int = #column) -> String {
 
-  return "File: \(inFile) Function: \(function) Line: \(line) Column: \(column)"
+    return "File: \(inFile) Function: \(function) Line: \(line) Column: \(column)"
 }
 
 open class TestScenario {
-  public let reportEventClosure: (_ uniqueEventDescription: String)->()
+    public let reportEventClosure: (_ uniqueEventDescription: String)->()
 
-  public required init(reportEventClosure: @escaping (_ uniqueEventDescription: String)->()) {
-    self.reportEventClosure = reportEventClosure
-  }
+    public required init(reportEventClosure: @escaping (_ uniqueEventDescription: String)->()) {
+        self.reportEventClosure = reportEventClosure
+    }
 
-  open func buildViewController() -> UIViewController {
-    preconditionFailure("Implement this method in subclass.")
-  }
+    open func buildViewController() -> UIViewController {
+        preconditionFailure("Implement this method in subclass.")
+    }
 }
+

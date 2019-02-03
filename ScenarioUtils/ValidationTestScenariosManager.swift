@@ -51,3 +51,4 @@ public func DeactivateScenario() {
 public func ValidateScenarioEventIsFired(eventToValidate: @autoclosure () -> ()) {
     ValidationTestScenariosManager.shared.validateEventIsFired(eventToValidate: eventToValidate)
 }
+
