@@ -12,7 +12,6 @@
 		45D97BB52206C303004C1D39 /* ExampleUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45D97BAE2206C303004C1D39 /* ExampleUI.framework */; };
 		45D97BB62206C303004C1D39 /* ExampleUI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 45D97BAE2206C303004C1D39 /* ExampleUI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		45D97BBE2206C317004C1D39 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45D97BBD2206C317004C1D39 /* ViewController.swift */; };
-		45D97BC02206C349004C1D39 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45D97BBF2206C348004C1D39 /* AppDelegate.swift */; };
 		45D97BC22206C355004C1D39 /* TestScenarios.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45D97BC12206C355004C1D39 /* TestScenarios.swift */; };
 		45D97BC32206C381004C1D39 /* TestScenarios.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45D97BC12206C355004C1D39 /* TestScenarios.swift */; };
 		45D97BC62206C39F004C1D39 /* SampleAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45D97BC42206C39F004C1D39 /* SampleAppUITests.swift */; };
@@ -23,6 +22,7 @@
 		45D97BCE2206D39E004C1D39 /* ExampleUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45D97BAE2206C303004C1D39 /* ExampleUI.framework */; };
 		45D97BD02206D431004C1D39 /* Scenario.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45D97BCF2206D431004C1D39 /* Scenario.framework */; };
 		45D97BD12206D431004C1D39 /* Scenario.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 45D97BCF2206D431004C1D39 /* Scenario.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		45D97BD32206D965004C1D39 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45D97BD22206D965004C1D39 /* AppDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,12 +69,12 @@
 		45D97BB12206C303004C1D39 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		45D97BBB2206C317004C1D39 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		45D97BBD2206C317004C1D39 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		45D97BBF2206C348004C1D39 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = ../../../SampleApp/AppDelegate.swift; sourceTree = "<group>"; };
 		45D97BC12206C355004C1D39 /* TestScenarios.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestScenarios.swift; sourceTree = "<group>"; };
 		45D97BC42206C39F004C1D39 /* SampleAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleAppUITests.swift; sourceTree = "<group>"; };
 		45D97BC72206CB68004C1D39 /* ScenarioUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ScenarioUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		45D97BCC2206D39E004C1D39 /* ScenarioUtils.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ScenarioUtils.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		45D97BCF2206D431004C1D39 /* Scenario.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Scenario.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		45D97BD22206D965004C1D39 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,7 +135,7 @@
 		45D97B882206BF69004C1D39 /* Example */ = {
 			isa = PBXGroup;
 			children = (
-				45D97BBF2206C348004C1D39 /* AppDelegate.swift */,
+				45D97BD22206D965004C1D39 /* AppDelegate.swift */,
 				45D97B922206BF6C004C1D39 /* LaunchScreen.storyboard */,
 				45D97B952206BF6C004C1D39 /* Info.plist */,
 			);
@@ -313,7 +313,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				45D97BC02206C349004C1D39 /* AppDelegate.swift in Sources */,
+				45D97BD32206D965004C1D39 /* AppDelegate.swift in Sources */,
 				45D97BC32206C381004C1D39 /* TestScenarios.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
