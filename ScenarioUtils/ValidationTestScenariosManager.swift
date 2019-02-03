@@ -15,17 +15,12 @@ class ValidationTestScenariosManager {
         self.reportedEventDescription = eventUniqueDescription
     }
 
-    private func scenarioIndex(scenario: TestScenario.Type) -> Int? {
-        return testScenariosRegistry.testScenariosNames.index(of: String(describing: scenario))
-    }
-
     private func getValidationScenarioInstance<Scenario>(scenarioClass: Scenario.Type) -> Scenario? where Scenario : TestScenario {
 
-        // TODO: avoid index usage.
-        guard let scenarioIndex = self.scenarioIndex(scenario: scenarioClass) else {
-            return nil
-        }
-        return self.testScenariosRegistry.testScenarios[scenarioIndex] as? Scenario
+        let testScenarios = self.testScenariosRegistry.testScenarios
+        let foundScenario = testScenarios.first(where: {type(of: $0) == scenarioClass })
+
+        return foundScenario as? Scenario
     }
 
     func validateEventIsFired(eventToValidate: () -> ()) {
@@ -44,7 +39,7 @@ class ValidationTestScenariosManager {
     }
 }
 
-// helper functions
+// MARK: helper functions
 public func ActivateScenario<Scenario>(scenario: Scenario.Type) -> Scenario where Scenario : TestScenario {
     return ValidationTestScenariosManager.shared.activateScenario(scenario: scenario)
 }

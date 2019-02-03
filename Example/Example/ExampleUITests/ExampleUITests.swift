@@ -1,7 +1,7 @@
 import XCTest
 import ScenarioUtils
 
-class SampleAppUITests: XCTestCase {
+class ExampleUITests: XCTestCase {
 
   override func setUp() {
     super.setUp()
