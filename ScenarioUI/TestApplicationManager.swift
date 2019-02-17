@@ -1,14 +1,14 @@
 import UIKit
 
-class TestApplicationManager {
-    static let shared = TestApplicationManager()
+final class TestApplicationManager {
+    fileprivate static let shared = TestApplicationManager()
 
     let testApplicationRootViewController: UIViewController
 
     private let internalTestApplicationRootViewController: TestApplicationRootViewController
     private let scenariosListController: ScenariosListTableViewController
 
-    init() {
+    private init() {
         self.scenariosListController = ScenariosListTableViewController()
 
         self.internalTestApplicationRootViewController = TestApplicationRootViewController(rootViewController: self.scenariosListController)
@@ -19,18 +19,18 @@ class TestApplicationManager {
 
         let testScenarios = buildTestScenarios(withReportEventClosure: self.eventFiredReporterFunction)
 
-        var renderableScenarios = [ScenariosListTableViewController.Scenario]()
+        var scenariosListItems = [ScenariosListTableViewController.Item]()
         for scenario in testScenarios {
             let scenarioName = String(describing: type(of: scenario))
-            renderableScenarios.append((scenarioName, {
+            scenariosListItems.append((scenarioName, {
                 let viewController = scenario.buildViewController()
                 self.internalTestApplicationRootViewController.pushViewController(viewController, animated: false)
             }))
         }
-        self.scenariosListController.scenariosList = renderableScenarios
+        self.scenariosListController.scenariosList = scenariosListItems
     }
 
-    func eventFiredReporterFunction(eventUniqueDescription: String) {
+    private func eventFiredReporterFunction(eventUniqueDescription: String) {
         self.internalTestApplicationRootViewController.firedEventLabelText = eventUniqueDescription
     }
 }

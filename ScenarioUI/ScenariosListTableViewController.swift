@@ -2,8 +2,8 @@ import UIKit
 
 class ScenariosListTableViewController: UITableViewController {
 
-    typealias Scenario = (scenarioName: String, selectionAction:()->())
-    var scenariosList: [Scenario] = [] {
+    typealias Item = (scenarioName: String, selectionAction:()->())
+    var scenariosList: [Item] = [] {
         didSet {
             self.tableView.reloadData()
         }
