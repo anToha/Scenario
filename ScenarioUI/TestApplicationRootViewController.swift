@@ -24,6 +24,7 @@
 
 import UIKit
 
+/// Root view controller for the test application.
 class TestApplicationRootViewController: UINavigationController {
     var firedEventLabelText: String = "" {
         didSet {
@@ -31,6 +32,7 @@ class TestApplicationRootViewController: UINavigationController {
         }
     }
 
+    /// Fired when the secret button is touched by the tests.
     var closeScenarioButtonDidTouch: () -> () = {}
 
     private var eventsReportingLabel: UILabel?
@@ -53,7 +55,6 @@ class TestApplicationRootViewController: UINavigationController {
         eventsReportingLabel.accessibilityIdentifier = "eventsReportingLabel"
         self.view.addSubview(eventsReportingLabel)
         self.view.sendSubview(toBack: eventsReportingLabel)
-
 
         self.eventsReportingLabel = eventsReportingLabel
     }

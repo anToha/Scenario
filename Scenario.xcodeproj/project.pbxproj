@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		4560999C1FC357CA00C3E49F /* ScenarioUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 4560999A1FC357CA00C3E49F /* ScenarioUtils.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		456099A71FC357ED00C3E49F /* ScenarioUI.h in Headers */ = {isa = PBXBuildFile; fileRef = 456099A51FC357ED00C3E49F /* ScenarioUI.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		456099AA1FC358CD00C3E49F /* ValidationTestScenariosManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458EE3611FB8B514007E8472 /* ValidationTestScenariosManager.swift */; };
+		456099AA1FC358CD00C3E49F /* TestScenariosValidationContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458EE3611FB8B514007E8472 /* TestScenariosValidationContainer.swift */; };
 		456099AE1FC35B0600C3E49F /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 458EE3A61FBB97F6007E8472 /* XCTest.framework */; };
 		456099AF1FC35DB700C3E49F /* TestApplicationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458EE35F1FB8B32D007E8472 /* TestApplicationManager.swift */; };
 		456099B01FC35DBC00C3E49F /* TestApplicationRootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458EE3631FB8B61B007E8472 /* TestApplicationRootViewController.swift */; };
@@ -34,7 +34,7 @@
 		456099BA1FC3667800C3E49F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		456099C31FC366E000C3E49F /* TestScenariosBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestScenariosBuilder.swift; sourceTree = "<group>"; };
 		458EE35F1FB8B32D007E8472 /* TestApplicationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestApplicationManager.swift; sourceTree = "<group>"; };
-		458EE3611FB8B514007E8472 /* ValidationTestScenariosManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationTestScenariosManager.swift; sourceTree = "<group>"; };
+		458EE3611FB8B514007E8472 /* TestScenariosValidationContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestScenariosValidationContainer.swift; sourceTree = "<group>"; };
 		458EE3631FB8B61B007E8472 /* TestApplicationRootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestApplicationRootViewController.swift; sourceTree = "<group>"; };
 		458EE3651FB8BD71007E8472 /* ScenariosListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScenariosListTableViewController.swift; sourceTree = "<group>"; };
 		458EE3A61FBB97F6007E8472 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Platforms/iPhoneOS.platform/Developer/Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -73,7 +73,7 @@
 			isa = PBXGroup;
 			children = (
 				456099C31FC366E000C3E49F /* TestScenariosBuilder.swift */,
-				458EE3611FB8B514007E8472 /* ValidationTestScenariosManager.swift */,
+				458EE3611FB8B514007E8472 /* TestScenariosValidationContainer.swift */,
 				4560999A1FC357CA00C3E49F /* ScenarioUtils.h */,
 				4560999B1FC357CA00C3E49F /* Info.plist */,
 			);
@@ -299,7 +299,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				456099AA1FC358CD00C3E49F /* ValidationTestScenariosManager.swift in Sources */,
+				456099AA1FC358CD00C3E49F /* TestScenariosValidationContainer.swift in Sources */,
 				456099C91FC3675600C3E49F /* TestScenariosBuilder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

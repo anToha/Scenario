@@ -25,15 +25,17 @@
 import XCTest
 import Scenario
 
-final class ValidationTestScenariosManager {
-    fileprivate static let shared = ValidationTestScenariosManager()
+final class TestScenariosValidationContainer {
+    fileprivate static let shared = TestScenariosValidationContainer()
 
     private(set) var reportedEventDescription = ""
     // optional is here to allow passing eventFiredReporterFunction in init
     private var testScenarios: [TestScenario]?
 
     private init() {
-        self.testScenarios = buildTestScenarios(withReportEventClosure: self.eventFiredReporterFunction)
+        self.testScenarios = buildTestScenarios(withReportEventClosure: { [weak self] eventDescription in
+            self?.eventFiredReporterFunction(eventUniqueDescription: eventDescription)
+        })
     }
 
     private func eventFiredReporterFunction(eventUniqueDescription: String) {
@@ -64,7 +66,7 @@ final class ValidationTestScenariosManager {
 
 // MARK: helper functions
 public func ActivateScenario<Scenario>(scenario: Scenario.Type) -> Scenario where Scenario : TestScenario {
-    return ValidationTestScenariosManager.shared.activateScenario(scenario: scenario)
+    return TestScenariosValidationContainer.shared.activateScenario(scenario: scenario)
 }
 
 public func DeactivateScenario() {
@@ -72,6 +74,6 @@ public func DeactivateScenario() {
 }
 
 public func ValidateScenarioEventIsFired(eventToValidate: @autoclosure () -> ()) {
-    ValidationTestScenariosManager.shared.validateEventIsFired(eventToValidate: eventToValidate)
+    TestScenariosValidationContainer.shared.validateEventIsFired(eventToValidate: eventToValidate)
 }
 

@@ -24,8 +24,10 @@
 
 import UIKit
 
+/// Table view that contains a list of all `TestScenarios` found
 class ScenariosListTableViewController: UITableViewController {
 
+    /// Contains `scenarioName` that's being displayed on the list and a closure for selection callback
     typealias Item = (scenarioName: String, selectionAction:()->())
     var scenariosList: [Item] = [] {
         didSet {

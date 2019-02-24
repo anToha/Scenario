@@ -24,11 +24,14 @@
 
 import UIKit
 
-final class TestApplicationManager {
+/// Main class that assembles the test application and its data
+final private class TestApplicationManager {
     fileprivate static let shared = TestApplicationManager()
 
+    /// Root view controller that is being returned for integration with test application
     let testApplicationRootViewController: UIViewController
 
+    /// Internal version of `testApplicationRootViewController`
     private let internalTestApplicationRootViewController: TestApplicationRootViewController
     private let scenariosListController: ScenariosListTableViewController
 
@@ -59,6 +62,8 @@ final class TestApplicationManager {
     }
 }
 
+/// Accessor for the main test application's root view controller.
+/// Use it in your test application's AppDelegate e.g. as a root for your Window.
 public func ScenarioTestingRootViewController() -> UIViewController {
     return TestApplicationManager.shared.testApplicationRootViewController
 }

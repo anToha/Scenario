@@ -25,6 +25,7 @@
 import Foundation
 import Scenario
 
+/// Get all sunbclasses of a desired class available in the current project.
 fileprivate func getSubclassesOfClass(queriedClass: AnyClass) -> [AnyClass] {
     var count = UInt32(0)
     let classList = objc_copyClassList(&count)!
@@ -39,6 +40,9 @@ fileprivate func getSubclassesOfClass(queriedClass: AnyClass) -> [AnyClass] {
     return resultClasses
 }
 
+/// Initialize all instances of `TestScenario` subclasses.
+///
+/// - Parameter reportEventClosure: `(String) -> ()` closure that is used by `TestScenario` to report events
 func buildTestScenarios(withReportEventClosure reportEventClosure: @escaping (String) -> ()) -> [TestScenario] {
     let testScenariosClasses = getSubclassesOfClass(queriedClass: TestScenario.self)
 
