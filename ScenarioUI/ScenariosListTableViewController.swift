@@ -24,7 +24,7 @@
 
 import UIKit
 
-/// Table view that contains a list of all `TestScenarios` found
+/// Table view that manages a general list of `TestScenario`s
 class ScenariosListTableViewController: UITableViewController {
 
     /// Contains `scenarioName` that's being displayed on the list and a closure for selection callback

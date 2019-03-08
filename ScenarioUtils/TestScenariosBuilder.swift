@@ -25,7 +25,7 @@
 import Foundation
 import Scenario
 
-/// Get all sunbclasses of a desired class available in the current project.
+/// Get all subclasses of a desired class available in the current project.
 fileprivate func getSubclassesOfClass(queriedClass: AnyClass) -> [AnyClass] {
     var count = UInt32(0)
     let classList = objc_copyClassList(&count)!
