@@ -23,7 +23,7 @@
 //
 
 import XCTest
-import Scenario
+import TestScenario
 
 final class TestScenariosValidationContainer {
     fileprivate static let shared = TestScenariosValidationContainer()

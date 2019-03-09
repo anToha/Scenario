@@ -24,7 +24,7 @@
 
 import UIKit.UIViewController
 import ExampleUI
-import Scenario
+import TestScenario
 
 class TestScenarioA: TestScenario {
 

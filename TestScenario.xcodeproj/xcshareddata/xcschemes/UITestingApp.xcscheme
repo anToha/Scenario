@@ -17,7 +17,7 @@
                BlueprintIdentifier = "458987491FAFAA450013D8F2"
                BuildableName = "SampleApp.app"
                BlueprintName = "SampleApp"
-               ReferencedContainer = "container:Scenario.xcodeproj">
+               ReferencedContainer = "container:TestScenario.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -35,7 +35,7 @@
                BlueprintIdentifier = "4589875D1FAFAA450013D8F2"
                BuildableName = "SampleAppUITests.xctest"
                BlueprintName = "SampleAppUITests"
-               ReferencedContainer = "container:Scenario.xcodeproj">
+               ReferencedContainer = "container:TestScenario.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -45,7 +45,7 @@
             BlueprintIdentifier = "458987491FAFAA450013D8F2"
             BuildableName = "SampleApp.app"
             BlueprintName = "SampleApp"
-            ReferencedContainer = "container:Scenario.xcodeproj">
+            ReferencedContainer = "container:TestScenario.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -68,7 +68,7 @@
             BlueprintIdentifier = "458987491FAFAA450013D8F2"
             BuildableName = "SampleApp.app"
             BlueprintName = "SampleApp"
-            ReferencedContainer = "container:Scenario.xcodeproj">
+            ReferencedContainer = "container:TestScenario.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -87,7 +87,7 @@
             BlueprintIdentifier = "458987491FAFAA450013D8F2"
             BuildableName = "SampleApp.app"
             BlueprintName = "SampleApp"
-            ReferencedContainer = "container:Scenario.xcodeproj">
+            ReferencedContainer = "container:TestScenario.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

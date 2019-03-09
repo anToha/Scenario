@@ -23,7 +23,7 @@
 //
 
 import Foundation
-import Scenario
+import TestScenario
 
 /// Get all subclasses of a desired class available in the current project.
 fileprivate func getSubclassesOfClass(queriedClass: AnyClass) -> [AnyClass] {

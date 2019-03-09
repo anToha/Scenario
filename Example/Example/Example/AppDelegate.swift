@@ -24,7 +24,7 @@
 
 import UIKit
 import ExampleUI
-import ScenarioUI
+import TestScenarioUI
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {

@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4560999C1FC357CA00C3E49F /* ScenarioUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 4560999A1FC357CA00C3E49F /* ScenarioUtils.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		456099A71FC357ED00C3E49F /* ScenarioUI.h in Headers */ = {isa = PBXBuildFile; fileRef = 456099A51FC357ED00C3E49F /* ScenarioUI.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4560999C1FC357CA00C3E49F /* TestScenarioUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 4560999A1FC357CA00C3E49F /* TestScenarioUtils.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		456099A71FC357ED00C3E49F /* TestScenarioUI.h in Headers */ = {isa = PBXBuildFile; fileRef = 456099A51FC357ED00C3E49F /* TestScenarioUI.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		456099AA1FC358CD00C3E49F /* TestScenariosValidationContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458EE3611FB8B514007E8472 /* TestScenariosValidationContainer.swift */; };
 		456099AE1FC35B0600C3E49F /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 458EE3A61FBB97F6007E8472 /* XCTest.framework */; };
 		456099AF1FC35DB700C3E49F /* TestApplicationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458EE35F1FB8B32D007E8472 /* TestApplicationManager.swift */; };
@@ -18,18 +18,18 @@
 		456099C71FC3671600C3E49F /* TestScenario.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45DC883A1FB2659000022582 /* TestScenario.swift */; };
 		456099C91FC3675600C3E49F /* TestScenariosBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 456099C31FC366E000C3E49F /* TestScenariosBuilder.swift */; };
 		456099CA1FC3676200C3E49F /* TestScenariosBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 456099C31FC366E000C3E49F /* TestScenariosBuilder.swift */; };
-		456099CB1FC3677300C3E49F /* Scenario.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 456099B71FC3667800C3E49F /* Scenario.framework */; };
-		456099CC1FC3677D00C3E49F /* Scenario.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 456099B71FC3667800C3E49F /* Scenario.framework */; };
+		456099CB1FC3677300C3E49F /* TestScenario.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 456099B71FC3667800C3E49F /* TestScenario.framework */; };
+		456099CC1FC3677D00C3E49F /* TestScenario.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 456099B71FC3667800C3E49F /* TestScenario.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		456099871FC357AD00C3E49F /* ScenarioUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ScenarioUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		456099981FC357CA00C3E49F /* ScenarioUtils.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ScenarioUtils.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		4560999A1FC357CA00C3E49F /* ScenarioUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ScenarioUtils.h; sourceTree = "<group>"; };
+		456099871FC357AD00C3E49F /* TestScenarioUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TestScenarioUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		456099981FC357CA00C3E49F /* TestScenarioUtils.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TestScenarioUtils.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4560999A1FC357CA00C3E49F /* TestScenarioUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestScenarioUtils.h; sourceTree = "<group>"; };
 		4560999B1FC357CA00C3E49F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		456099A51FC357ED00C3E49F /* ScenarioUI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScenarioUI.h; sourceTree = "<group>"; };
+		456099A51FC357ED00C3E49F /* TestScenarioUI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestScenarioUI.h; sourceTree = "<group>"; };
 		456099A61FC357ED00C3E49F /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		456099B71FC3667800C3E49F /* Scenario.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Scenario.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		456099B71FC3667800C3E49F /* TestScenario.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TestScenario.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		456099B91FC3667800C3E49F /* Scenario.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Scenario.h; sourceTree = "<group>"; };
 		456099BA1FC3667800C3E49F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		456099C31FC366E000C3E49F /* TestScenariosBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestScenariosBuilder.swift; sourceTree = "<group>"; };
@@ -46,7 +46,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				456099CC1FC3677D00C3E49F /* Scenario.framework in Frameworks */,
+				456099CC1FC3677D00C3E49F /* TestScenario.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -54,7 +54,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				456099CB1FC3677300C3E49F /* Scenario.framework in Frameworks */,
+				456099CB1FC3677300C3E49F /* TestScenario.framework in Frameworks */,
 				456099AE1FC35B0600C3E49F /* XCTest.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -69,45 +69,45 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		456099991FC357CA00C3E49F /* ScenarioUtils */ = {
+		456099991FC357CA00C3E49F /* TestScenarioUtils */ = {
 			isa = PBXGroup;
 			children = (
 				456099C31FC366E000C3E49F /* TestScenariosBuilder.swift */,
 				458EE3611FB8B514007E8472 /* TestScenariosValidationContainer.swift */,
-				4560999A1FC357CA00C3E49F /* ScenarioUtils.h */,
+				4560999A1FC357CA00C3E49F /* TestScenarioUtils.h */,
 				4560999B1FC357CA00C3E49F /* Info.plist */,
 			);
-			path = ScenarioUtils;
+			path = TestScenarioUtils;
 			sourceTree = "<group>";
 		};
-		456099A41FC357ED00C3E49F /* ScenarioUI */ = {
+		456099A41FC357ED00C3E49F /* TestScenarioUI */ = {
 			isa = PBXGroup;
 			children = (
 				458EE3651FB8BD71007E8472 /* ScenariosListTableViewController.swift */,
 				458EE3631FB8B61B007E8472 /* TestApplicationRootViewController.swift */,
 				458EE35F1FB8B32D007E8472 /* TestApplicationManager.swift */,
-				456099A51FC357ED00C3E49F /* ScenarioUI.h */,
+				456099A51FC357ED00C3E49F /* TestScenarioUI.h */,
 				456099A61FC357ED00C3E49F /* Info.plist */,
 			);
-			path = ScenarioUI;
+			path = TestScenarioUI;
 			sourceTree = "<group>";
 		};
-		456099B81FC3667800C3E49F /* Scenario */ = {
+		456099B81FC3667800C3E49F /* TestScenario */ = {
 			isa = PBXGroup;
 			children = (
 				45DC883A1FB2659000022582 /* TestScenario.swift */,
 				456099B91FC3667800C3E49F /* Scenario.h */,
 				456099BA1FC3667800C3E49F /* Info.plist */,
 			);
-			path = Scenario;
+			path = TestScenario;
 			sourceTree = "<group>";
 		};
 		458987411FAFAA450013D8F2 = {
 			isa = PBXGroup;
 			children = (
-				456099A41FC357ED00C3E49F /* ScenarioUI */,
-				456099991FC357CA00C3E49F /* ScenarioUtils */,
-				456099B81FC3667800C3E49F /* Scenario */,
+				456099A41FC357ED00C3E49F /* TestScenarioUI */,
+				456099991FC357CA00C3E49F /* TestScenarioUtils */,
+				456099B81FC3667800C3E49F /* TestScenario */,
 				4589874B1FAFAA450013D8F2 /* Products */,
 				458EE3A51FBB97F5007E8472 /* Frameworks */,
 			);
@@ -116,9 +116,9 @@
 		4589874B1FAFAA450013D8F2 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				456099871FC357AD00C3E49F /* ScenarioUI.framework */,
-				456099981FC357CA00C3E49F /* ScenarioUtils.framework */,
-				456099B71FC3667800C3E49F /* Scenario.framework */,
+				456099871FC357AD00C3E49F /* TestScenarioUI.framework */,
+				456099981FC357CA00C3E49F /* TestScenarioUtils.framework */,
+				456099B71FC3667800C3E49F /* TestScenario.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -138,7 +138,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				456099A71FC357ED00C3E49F /* ScenarioUI.h in Headers */,
+				456099A71FC357ED00C3E49F /* TestScenarioUI.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -146,7 +146,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4560999C1FC357CA00C3E49F /* ScenarioUtils.h in Headers */,
+				4560999C1FC357CA00C3E49F /* TestScenarioUtils.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -161,9 +161,9 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		456099861FC357AD00C3E49F /* ScenarioUI */ = {
+		456099861FC357AD00C3E49F /* TestScenarioUI */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 456099901FC357AD00C3E49F /* Build configuration list for PBXNativeTarget "ScenarioUI" */;
+			buildConfigurationList = 456099901FC357AD00C3E49F /* Build configuration list for PBXNativeTarget "TestScenarioUI" */;
 			buildPhases = (
 				456099821FC357AD00C3E49F /* Sources */,
 				456099831FC357AD00C3E49F /* Frameworks */,
@@ -174,14 +174,14 @@
 			);
 			dependencies = (
 			);
-			name = ScenarioUI;
+			name = TestScenarioUI;
 			productName = VCTDDTestingUI;
-			productReference = 456099871FC357AD00C3E49F /* ScenarioUI.framework */;
+			productReference = 456099871FC357AD00C3E49F /* TestScenarioUI.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		456099971FC357CA00C3E49F /* ScenarioUtils */ = {
+		456099971FC357CA00C3E49F /* TestScenarioUtils */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 456099A11FC357CA00C3E49F /* Build configuration list for PBXNativeTarget "ScenarioUtils" */;
+			buildConfigurationList = 456099A11FC357CA00C3E49F /* Build configuration list for PBXNativeTarget "TestScenarioUtils" */;
 			buildPhases = (
 				456099931FC357CA00C3E49F /* Sources */,
 				456099941FC357CA00C3E49F /* Frameworks */,
@@ -192,14 +192,14 @@
 			);
 			dependencies = (
 			);
-			name = ScenarioUtils;
+			name = TestScenarioUtils;
 			productName = VCTDDTestUtils;
-			productReference = 456099981FC357CA00C3E49F /* ScenarioUtils.framework */;
+			productReference = 456099981FC357CA00C3E49F /* TestScenarioUtils.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		456099B61FC3667800C3E49F /* Scenario */ = {
+		456099B61FC3667800C3E49F /* TestScenario */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 456099C01FC3667900C3E49F /* Build configuration list for PBXNativeTarget "Scenario" */;
+			buildConfigurationList = 456099C01FC3667900C3E49F /* Build configuration list for PBXNativeTarget "TestScenario" */;
 			buildPhases = (
 				456099B21FC3667800C3E49F /* Sources */,
 				456099B31FC3667800C3E49F /* Frameworks */,
@@ -210,9 +210,9 @@
 			);
 			dependencies = (
 			);
-			name = Scenario;
+			name = TestScenario;
 			productName = VCTDDTestScenario;
-			productReference = 456099B71FC3667800C3E49F /* Scenario.framework */;
+			productReference = 456099B71FC3667800C3E49F /* TestScenario.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -239,7 +239,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 458987451FAFAA450013D8F2 /* Build configuration list for PBXProject "Scenario" */;
+			buildConfigurationList = 458987451FAFAA450013D8F2 /* Build configuration list for PBXProject "TestScenario" */;
 			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -252,9 +252,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				456099861FC357AD00C3E49F /* ScenarioUI */,
-				456099971FC357CA00C3E49F /* ScenarioUtils */,
-				456099B61FC3667800C3E49F /* Scenario */,
+				456099861FC357AD00C3E49F /* TestScenarioUI */,
+				456099971FC357CA00C3E49F /* TestScenarioUtils */,
+				456099B61FC3667800C3E49F /* TestScenario */,
 			);
 		};
 /* End PBXProject section */
@@ -326,12 +326,12 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = ScenarioUI/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/TestScenarioUI/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				ONLY_ACTIVE_ARCH = NO;
-				PRODUCT_BUNDLE_IDENTIFIER = private.ScenarioUI;
+				PRODUCT_BUNDLE_IDENTIFIER = private.TestScenarioUI;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.0;
@@ -353,11 +353,11 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = ScenarioUI/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/TestScenarioUI/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = private.ScenarioUI;
+				PRODUCT_BUNDLE_IDENTIFIER = private.TestScenarioUI;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.0;
@@ -384,7 +384,7 @@
 					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
 				);
-				INFOPLIST_FILE = ScenarioUtils/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/TestScenarioUtils/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -394,7 +394,7 @@
 					XCTest,
 					"-weak-lswiftXCTest",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = private.ScenarioUtils;
+				PRODUCT_BUNDLE_IDENTIFIER = private.TestScenarioUtils;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.0;
@@ -421,7 +421,7 @@
 					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
 				);
-				INFOPLIST_FILE = ScenarioUtils/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/TestScenarioUtils/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -431,7 +431,7 @@
 					XCTest,
 					"-weak-lswiftXCTest",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = private.ScenarioUtils;
+				PRODUCT_BUNDLE_IDENTIFIER = private.TestScenarioUtils;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.0;
@@ -453,12 +453,12 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = Scenario/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/TestScenario/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				ONLY_ACTIVE_ARCH = NO;
-				PRODUCT_BUNDLE_IDENTIFIER = private.Scenario;
+				PRODUCT_BUNDLE_IDENTIFIER = private.TestScenario;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.0;
@@ -480,11 +480,11 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = Scenario/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/TestScenario/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = private.Scenario;
+				PRODUCT_BUNDLE_IDENTIFIER = private.TestScenario;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.0;
@@ -605,7 +605,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		456099901FC357AD00C3E49F /* Build configuration list for PBXNativeTarget "ScenarioUI" */ = {
+		456099901FC357AD00C3E49F /* Build configuration list for PBXNativeTarget "TestScenarioUI" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				456099911FC357AD00C3E49F /* Debug */,
@@ -614,7 +614,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		456099A11FC357CA00C3E49F /* Build configuration list for PBXNativeTarget "ScenarioUtils" */ = {
+		456099A11FC357CA00C3E49F /* Build configuration list for PBXNativeTarget "TestScenarioUtils" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				456099A21FC357CA00C3E49F /* Debug */,
@@ -623,7 +623,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		456099C01FC3667900C3E49F /* Build configuration list for PBXNativeTarget "Scenario" */ = {
+		456099C01FC3667900C3E49F /* Build configuration list for PBXNativeTarget "TestScenario" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				456099C11FC3667900C3E49F /* Debug */,
@@ -632,7 +632,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		458987451FAFAA450013D8F2 /* Build configuration list for PBXProject "Scenario" */ = {
+		458987451FAFAA450013D8F2 /* Build configuration list for PBXProject "TestScenario" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				458987651FAFAA450013D8F2 /* Debug */,

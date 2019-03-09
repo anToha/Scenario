@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		45A4473C22337E2E004520E2 /* TestScenarioUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45A4473B22337E2E004520E2 /* TestScenarioUI.framework */; };
+		45A4473D22337E2E004520E2 /* TestScenarioUI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 45A4473B22337E2E004520E2 /* TestScenarioUI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		45A44746223387A7004520E2 /* TestScenario.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45A44745223387A7004520E2 /* TestScenario.framework */; };
+		45A44747223387A7004520E2 /* TestScenario.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 45A44745223387A7004520E2 /* TestScenario.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		45A4474922338C47004520E2 /* TestScenarioUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45A4474822338C47004520E2 /* TestScenarioUtils.framework */; };
 		45D97B942206BF6C004C1D39 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 45D97B922206BF6C004C1D39 /* LaunchScreen.storyboard */; };
 		45D97BB22206C303004C1D39 /* ExampleUI.h in Headers */ = {isa = PBXBuildFile; fileRef = 45D97BB02206C303004C1D39 /* ExampleUI.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		45D97BB52206C303004C1D39 /* ExampleUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45D97BAE2206C303004C1D39 /* ExampleUI.framework */; };
@@ -15,13 +20,8 @@
 		45D97BC22206C355004C1D39 /* TestScenarios.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45D97BC12206C355004C1D39 /* TestScenarios.swift */; };
 		45D97BC32206C381004C1D39 /* TestScenarios.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45D97BC12206C355004C1D39 /* TestScenarios.swift */; };
 		45D97BC62206C39F004C1D39 /* ExampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45D97BC42206C39F004C1D39 /* ExampleUITests.swift */; };
-		45D97BC82206CB68004C1D39 /* ScenarioUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45D97BC72206CB68004C1D39 /* ScenarioUI.framework */; };
-		45D97BC92206CB68004C1D39 /* ScenarioUI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 45D97BC72206CB68004C1D39 /* ScenarioUI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		45D97BCA2206CE83004C1D39 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 45D97BBC2206C317004C1D39 /* Main.storyboard */; };
-		45D97BCD2206D39E004C1D39 /* ScenarioUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45D97BCC2206D39E004C1D39 /* ScenarioUtils.framework */; };
 		45D97BCE2206D39E004C1D39 /* ExampleUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45D97BAE2206C303004C1D39 /* ExampleUI.framework */; };
-		45D97BD02206D431004C1D39 /* Scenario.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45D97BCF2206D431004C1D39 /* Scenario.framework */; };
-		45D97BD12206D431004C1D39 /* Scenario.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 45D97BCF2206D431004C1D39 /* Scenario.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		45D97BD32206D965004C1D39 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45D97BD22206D965004C1D39 /* AppDelegate.swift */; };
 /* End PBXBuildFile section */
 
@@ -49,9 +49,9 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				45D97BC92206CB68004C1D39 /* ScenarioUI.framework in Embed Frameworks */,
-				45D97BD12206D431004C1D39 /* Scenario.framework in Embed Frameworks */,
+				45A4473D22337E2E004520E2 /* TestScenarioUI.framework in Embed Frameworks */,
 				45D97BB62206C303004C1D39 /* ExampleUI.framework in Embed Frameworks */,
+				45A44747223387A7004520E2 /* TestScenario.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -59,6 +59,13 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		45A4473822337DF4004520E2 /* TestScenarioUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = TestScenarioUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		45A4473B22337E2E004520E2 /* TestScenarioUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = TestScenarioUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		45A4473E22337E6F004520E2 /* TestScenarioUtils.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = TestScenarioUtils.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		45A447412233876F004520E2 /* TestScenarioUtils.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = TestScenarioUtils.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		45A4474322338790004520E2 /* TestScenario.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = TestScenario.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		45A44745223387A7004520E2 /* TestScenario.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = TestScenario.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		45A4474822338C47004520E2 /* TestScenarioUtils.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = TestScenarioUtils.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		45D97B862206BF69004C1D39 /* Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		45D97B932206BF6C004C1D39 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		45D97B952206BF6C004C1D39 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -72,7 +79,6 @@
 		45D97BC12206C355004C1D39 /* TestScenarios.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestScenarios.swift; sourceTree = "<group>"; };
 		45D97BC42206C39F004C1D39 /* ExampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleUITests.swift; sourceTree = "<group>"; };
 		45D97BC72206CB68004C1D39 /* ScenarioUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ScenarioUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		45D97BCC2206D39E004C1D39 /* ScenarioUtils.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ScenarioUtils.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		45D97BCF2206D431004C1D39 /* Scenario.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Scenario.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		45D97BD22206D965004C1D39 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -82,9 +88,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				45D97BC82206CB68004C1D39 /* ScenarioUI.framework in Frameworks */,
-				45D97BD02206D431004C1D39 /* Scenario.framework in Frameworks */,
+				45A4473C22337E2E004520E2 /* TestScenarioUI.framework in Frameworks */,
 				45D97BB52206C303004C1D39 /* ExampleUI.framework in Frameworks */,
+				45A44746223387A7004520E2 /* TestScenario.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -92,8 +98,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				45A4474922338C47004520E2 /* TestScenarioUtils.framework in Frameworks */,
 				45D97BCE2206D39E004C1D39 /* ExampleUI.framework in Frameworks */,
-				45D97BCD2206D39E004C1D39 /* ScenarioUtils.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -110,6 +116,10 @@
 		45D97B7D2206BF69004C1D39 = {
 			isa = PBXGroup;
 			children = (
+				45A44745223387A7004520E2 /* TestScenario.framework */,
+				45A4473E22337E6F004520E2 /* TestScenarioUtils.framework */,
+				45A4473B22337E2E004520E2 /* TestScenarioUI.framework */,
+				45A4473822337DF4004520E2 /* TestScenarioUI.framework */,
 				45D97BCF2206D431004C1D39 /* Scenario.framework */,
 				45D97BC72206CB68004C1D39 /* ScenarioUI.framework */,
 				45D97B882206BF69004C1D39 /* Example */,
@@ -166,7 +176,9 @@
 		45D97BCB2206D39E004C1D39 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				45D97BCC2206D39E004C1D39 /* ScenarioUtils.framework */,
+				45A4474822338C47004520E2 /* TestScenarioUtils.framework */,
+				45A4474322338790004520E2 /* TestScenario.framework */,
+				45A447412233876F004520E2 /* TestScenarioUtils.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";

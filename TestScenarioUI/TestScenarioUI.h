@@ -1,5 +1,5 @@
 //
-//  ScenarioUtils.h
+//  ScenarioUI.h
 //
 //  Copyright (c) 2019 Ogarkov Anton
 //
@@ -24,12 +24,12 @@
 
 #import <UIKit/UIKit.h>
 
-//! Project version number for ScenarioUtils.
-FOUNDATION_EXPORT double ScenarioUtilsVersionNumber;
+//! Project version number for ScenarioUI.
+FOUNDATION_EXPORT double TestScenarioUIVersionNumber;
 
-//! Project version string for ScenarioUtils.
-FOUNDATION_EXPORT const unsigned char ScenarioUtilsVersionString[];
+//! Project version string for ScenarioUI.
+FOUNDATION_EXPORT const unsigned char TestScenarioUIVersionString[];
 
-// In this header, you should import all the public headers of your framework using statements like #import <ScenarioUtils/PublicHeader.h>
+// In this header, you should import all the public headers of your framework using statements like #import <ScenarioUI/PublicHeader.h>
 
 

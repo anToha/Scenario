@@ -23,7 +23,7 @@
 //
 
 import XCTest
-import ScenarioUtils
+import TestScenarioUtils
 
 class ExampleUITests: XCTestCase {
 
