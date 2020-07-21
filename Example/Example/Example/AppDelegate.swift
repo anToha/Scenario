@@ -36,6 +36,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let mainWindow = UIWindow(frame: UIScreen.main.bounds)
         self.window = mainWindow
 
+        ConfigureTestApplication(withConfig: TestApplicationManagerConfig(scenariosClasses: [TestScenarioA.self, TestScenarioB.self]))
+
         mainWindow.rootViewController = ScenarioTestingRootViewController()
 
         mainWindow.makeKeyAndVisible()

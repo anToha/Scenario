@@ -29,23 +29,17 @@ final class TestScenariosValidationContainer {
     fileprivate static let shared = TestScenariosValidationContainer()
 
     private(set) var reportedEventDescription = ""
-    // optional is here to allow passing eventFiredReporterFunction in init
-    private var testScenarios: [TestScenario]?
-
-    private init() {
-        self.testScenarios = buildTestScenarios(withReportEventClosure: { [weak self] eventDescription in
-            self?.eventFiredReporterFunction(eventUniqueDescription: eventDescription)
-        })
-    }
 
     private func eventFiredReporterFunction(eventUniqueDescription: String) {
         self.reportedEventDescription = eventUniqueDescription
     }
 
-    private func getValidationScenarioInstance<Scenario>(scenarioClass: Scenario.Type) -> Scenario? where Scenario : TestScenario {
-        let foundScenario = self.testScenarios?.first(where: {type(of: $0) == scenarioClass })
+    private func makeValidationScenarioInstance<Scenario>(scenarioClass: Scenario.Type) -> Scenario? where Scenario : TestScenario {
+        let newScenarios = build(testScenarios: [scenarioClass], withReportEventClosure: { [weak self] eventDescription in
+            self?.eventFiredReporterFunction(eventUniqueDescription: eventDescription)
+            })
 
-        return foundScenario as? Scenario
+        return newScenarios.first as? Scenario
     }
 
     fileprivate func validateEventIsFired(eventToValidate: () -> ()) {
@@ -56,7 +50,7 @@ final class TestScenariosValidationContainer {
     }
 
     fileprivate func activateScenario<Scenario>(scenario: Scenario.Type) -> Scenario where Scenario : TestScenario {
-        guard let scenarioInstance = self.getValidationScenarioInstance(scenarioClass: scenario) else {
+        guard let scenarioInstance = self.makeValidationScenarioInstance(scenarioClass: scenario) else {
             fatalError("Could not find scenario of type: \(scenario)")
         }
         XCUIApplication().tables.staticTexts[String(describing: scenario)].tap()

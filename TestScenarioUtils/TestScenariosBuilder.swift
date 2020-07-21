@@ -25,28 +25,12 @@
 import Foundation
 import TestScenario
 
-/// Get all subclasses of a desired class available in the current project.
-fileprivate func getSubclassesOfClass(queriedClass: AnyClass) -> [AnyClass] {
-    var count = UInt32(0)
-    let classList = objc_copyClassList(&count)!
-
-    var resultClasses = [AnyClass]()
-
-    for i in 0 ..< Int(count) {
-        if class_getSuperclass(classList[i]) == queriedClass {
-            resultClasses.append(classList[i])
-        }
-    }
-    return resultClasses
-}
-
 /// Initialize all instances of `TestScenario` subclasses.
 ///
+/// - Parameter testScenarios: classes of test scenarios to be constructed
 /// - Parameter reportEventClosure: `(String) -> ()` closure that is used by `TestScenario` to report events
-func buildTestScenarios(withReportEventClosure reportEventClosure: @escaping (String) -> ()) -> [TestScenario] {
-    let testScenariosClasses = getSubclassesOfClass(queriedClass: TestScenario.self)
-
-    return testScenariosClasses.map { (currentClass: AnyClass) -> TestScenario in
+func build(testScenarios classes: [TestScenario.Type], withReportEventClosure reportEventClosure: @escaping (String) -> ()) -> [TestScenario] {
+    return classes.map { (currentClass: AnyClass) -> TestScenario in
         let viewControllerTestScenarioClass = currentClass as! TestScenario.Type
         return viewControllerTestScenarioClass.init(reportEventClosure: reportEventClosure)
     }

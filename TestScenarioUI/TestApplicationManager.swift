@@ -23,48 +23,70 @@
 //
 
 import UIKit
+import TestScenario
+
+/// Configuration for the test application. It contains everything that is necessary for the test app to work properly
+public struct TestApplicationManagerConfig {
+    /// all scenarios that should be accessible through the table view of ScenarioTestingRootViewController
+    let scenariosClasses: [TestScenario.Type]
+
+    public init(scenariosClasses: [TestScenario.Type]) {
+        self.scenariosClasses = scenariosClasses
+    }
+}
 
 /// Main class that assembles the test application and its data
 final private class TestApplicationManager {
     fileprivate static let shared = TestApplicationManager()
 
     /// Root view controller that is being returned for integration with test application
-    let testApplicationRootViewController: UIViewController
+    var testApplicationRootViewController: UIViewController?
 
     /// Internal version of `testApplicationRootViewController`
-    private let internalTestApplicationRootViewController: TestApplicationRootViewController
-    private let scenariosListController: ScenariosListTableViewController
+    private var internalTestApplicationRootViewController: TestApplicationRootViewController?
 
-    private init() {
-        self.scenariosListController = ScenariosListTableViewController()
+    private func eventFiredReporterFunction(eventUniqueDescription: String) {
+        self.internalTestApplicationRootViewController?.firedEventLabelText = eventUniqueDescription
+    }
 
-        self.internalTestApplicationRootViewController = TestApplicationRootViewController(rootViewController: self.scenariosListController)
-        self.testApplicationRootViewController = self.internalTestApplicationRootViewController
-        self.internalTestApplicationRootViewController.closeScenarioButtonDidTouch = {
-            self.internalTestApplicationRootViewController.popViewController(animated: false)
+    func configure(withConfig config: TestApplicationManagerConfig) {
+        let scenariosListController = ScenariosListTableViewController()
+
+        let internalTestApplicationRootViewController = TestApplicationRootViewController(rootViewController: scenariosListController)
+        self.testApplicationRootViewController = internalTestApplicationRootViewController
+        internalTestApplicationRootViewController.closeScenarioButtonDidTouch = { [weak internalTestApplicationRootViewController] in
+            internalTestApplicationRootViewController?.popViewController(animated: false)
         }
 
-        let testScenarios = buildTestScenarios(withReportEventClosure: self.eventFiredReporterFunction)
+        let testScenarios = build(testScenarios: config.scenariosClasses, withReportEventClosure: self.eventFiredReporterFunction)
 
         var scenariosListItems = [ScenariosListTableViewController.Item]()
         for scenario in testScenarios {
             let scenarioName = String(describing: type(of: scenario))
-            scenariosListItems.append((scenarioName, {
+            scenariosListItems.append((scenarioName, { [weak internalTestApplicationRootViewController] in
                 let viewController = scenario.buildViewController()
-                self.internalTestApplicationRootViewController.pushViewController(viewController, animated: false)
+                internalTestApplicationRootViewController?.pushViewController(viewController, animated: false)
             }))
         }
-        self.scenariosListController.scenariosList = scenariosListItems
-    }
+        scenariosListController.scenariosList = scenariosListItems
 
-    private func eventFiredReporterFunction(eventUniqueDescription: String) {
-        self.internalTestApplicationRootViewController.firedEventLabelText = eventUniqueDescription
+        self.internalTestApplicationRootViewController = internalTestApplicationRootViewController
+        self.testApplicationRootViewController = internalTestApplicationRootViewController
     }
 }
 
 /// Accessor for the main test application's root view controller.
 /// Use it in your test application's AppDelegate e.g. as a root for your Window.
 public func ScenarioTestingRootViewController() -> UIViewController {
-    return TestApplicationManager.shared.testApplicationRootViewController
+    guard let rootVC = TestApplicationManager.shared.testApplicationRootViewController else {
+        preconditionFailure("ScenarioTestingRootViewController is not configured. Please call ")
+    }
+    return rootVC
+}
+
+/// Configurator for the TestScenario test application. It will create the necessary UI for your test app
+/// - parameter withConfig: configuration containing the reqiuired info for the application to work properly
+public func ConfigureTestApplication(withConfig config: TestApplicationManagerConfig) {
+    TestApplicationManager.shared.configure(withConfig: config)
 }
 
